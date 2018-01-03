@@ -1,0 +1,266 @@
+10:48:17.135 [main] INFO  com.lk.Application - Starting Application on DESKTOP-1I98NIE with PID 16792 (D:\code\ws\mybatis-boot\target\classes started by root in D:\code\ws\mybatis-boot) 
+10:48:17.141 [main] DEBUG com.lk.Application - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE 
+10:48:17.141 [main] INFO  com.lk.Application - No active profile set, falling back to default profiles: default 
+10:48:21.245 [main] INFO  com.lk.MyWebAppConfigurer - C:\Program Files\Java\jdk1.8.0_151 
+10:48:21.247 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ true 
+10:48:21.247 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ null 
+10:48:21.247 [main] INFO  com.lk.MyWebAppConfigurer - classpath:mybatis/mapper/*.xml 
+10:48:21.248 [main] INFO  com.lk.MyWebAppConfigurer - debug 
+10:48:23.653 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<< 
+10:48:23.654 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK Debug  <<<<<<<<<<<<< 
+10:48:23.654 [main] INFO  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK info  <<<<<<<<<<<<< 
+10:48:23.654 [main] WARN  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK warn  <<<<<<<<<<<<< 
+10:48:23.654 [main] ERROR com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK err  <<<<<<<<<<<<< 
+10:48:23.656 [main] INFO  com.lk.Application - Started Application in 7.029 seconds (JVM running for 9.288) 
+10:48:32.678 [main] INFO  com.lk.Application - Starting Application on DESKTOP-1I98NIE with PID 8904 (D:\code\ws\mybatis-boot\target\classes started by root in D:\code\ws\mybatis-boot) 
+10:48:32.678 [main] DEBUG com.lk.Application - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE 
+10:48:32.678 [main] INFO  com.lk.Application - No active profile set, falling back to default profiles: default 
+10:52:08.560 [main] INFO  com.lk.MyWebAppConfigurer - C:\Program Files\Java\jdk1.8.0_151 
+10:52:08.560 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ true 
+10:52:08.560 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ null 
+10:52:08.561 [main] INFO  com.lk.MyWebAppConfigurer - classpath:mybatis/mapper/*.xml 
+10:52:08.561 [main] INFO  com.lk.MyWebAppConfigurer - debug 
+10:52:26.158 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<< 
+10:52:26.158 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK Debug  <<<<<<<<<<<<< 
+10:52:26.158 [main] INFO  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK info  <<<<<<<<<<<<< 
+10:52:26.158 [main] WARN  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK warn  <<<<<<<<<<<<< 
+10:52:26.158 [main] ERROR com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK err  <<<<<<<<<<<<< 
+10:52:26.161 [main] INFO  com.lk.Application - Started Application in 234.011 seconds (JVM running for 234.52) 
+14:16:43.425 [main] INFO  com.lk.Application - Starting Application on DESKTOP-1I98NIE with PID 3528 (D:\code\ws\mybatis-boot\target\classes started by root in D:\code\ws\mybatis-boot) 
+14:16:43.426 [main] DEBUG com.lk.Application - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE 
+14:16:43.426 [main] INFO  com.lk.Application - No active profile set, falling back to default profiles: default 
+14:16:45.696 [main] INFO  com.lk.MyWebAppConfigurer - C:\Program Files\Java\jdk1.8.0_151 
+14:16:45.696 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ true 
+14:16:45.697 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ null 
+14:16:45.697 [main] INFO  com.lk.MyWebAppConfigurer - classpath:mybatis/mapper/*.xml 
+14:16:45.697 [main] INFO  com.lk.MyWebAppConfigurer - debug 
+14:16:47.302 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<< 
+14:16:47.302 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK Debug  <<<<<<<<<<<<< 
+14:16:47.302 [main] INFO  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK info  <<<<<<<<<<<<< 
+14:16:47.302 [main] WARN  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK warn  <<<<<<<<<<<<< 
+14:16:47.302 [main] ERROR com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK err  <<<<<<<<<<<<< 
+14:16:47.304 [main] INFO  com.lk.Application - Started Application in 4.184 seconds (JVM running for 4.585) 
+14:18:35.697 [main] INFO  com.lk.Application - Starting Application on DESKTOP-1I98NIE with PID 17328 (D:\code\ws\mybatis-boot\target\classes started by root in D:\code\ws\mybatis-boot) 
+14:18:35.697 [main] DEBUG com.lk.Application - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE 
+14:18:35.698 [main] INFO  com.lk.Application - No active profile set, falling back to default profiles: default 
+14:18:37.821 [main] INFO  com.lk.MyWebAppConfigurer - C:\Program Files\Java\jdk1.8.0_151 
+14:18:37.821 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ true 
+14:18:37.821 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ null 
+14:18:37.821 [main] INFO  com.lk.MyWebAppConfigurer - classpath:mybatis/mapper/*.xml 
+14:18:37.821 [main] INFO  com.lk.MyWebAppConfigurer - debug 
+14:18:39.344 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<< 
+14:18:39.344 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK Debug  <<<<<<<<<<<<< 
+14:18:39.345 [main] INFO  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK info  <<<<<<<<<<<<< 
+14:18:39.345 [main] WARN  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK warn  <<<<<<<<<<<<< 
+14:18:39.345 [main] ERROR com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK err  <<<<<<<<<<<<< 
+14:18:39.346 [main] INFO  com.lk.Application - Started Application in 3.936 seconds (JVM running for 4.198) 
+14:18:47.634 [main] INFO  com.lk.Application - Starting Application on DESKTOP-1I98NIE with PID 10536 (D:\code\ws\mybatis-boot\target\classes started by root in D:\code\ws\mybatis-boot) 
+14:18:47.634 [main] DEBUG com.lk.Application - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE 
+14:18:47.634 [main] INFO  com.lk.Application - No active profile set, falling back to default profiles: default 
+14:19:18.865 [main] INFO  com.lk.MyWebAppConfigurer - C:\Program Files\Java\jdk1.8.0_151 
+14:19:18.866 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ true 
+14:19:18.866 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ null 
+14:19:18.866 [main] INFO  com.lk.MyWebAppConfigurer - classpath:mybatis/mapper/*.xml 
+14:19:18.866 [main] INFO  com.lk.MyWebAppConfigurer - debug 
+14:19:23.763 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<< 
+14:19:23.763 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK Debug  <<<<<<<<<<<<< 
+14:19:23.763 [main] INFO  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK info  <<<<<<<<<<<<< 
+14:19:23.763 [main] WARN  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK warn  <<<<<<<<<<<<< 
+14:19:23.763 [main] ERROR com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK err  <<<<<<<<<<<<< 
+14:19:23.765 [main] INFO  com.lk.Application - Started Application in 36.501 seconds (JVM running for 37.423) 
+21:26:32.950 [main] INFO  com.lk.Application - Starting Application on DESKTOP-1I98NIE with PID 11796 (D:\code\ws\mybatis-boot\target\classes started by root in D:\code\ws\mybatis-boot) 
+21:26:32.956 [main] DEBUG com.lk.Application - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE 
+21:26:32.957 [main] INFO  com.lk.Application - No active profile set, falling back to default profiles: default 
+21:27:22.814 [main] INFO  com.lk.MyWebAppConfigurer - C:\Program Files\Java\jdk1.8.0_151 
+21:27:22.814 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ true 
+21:27:22.815 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ null 
+21:27:22.815 [main] INFO  com.lk.MyWebAppConfigurer - classpath:mybatis/mapper/*.xml 
+21:27:22.815 [main] INFO  com.lk.MyWebAppConfigurer - debug 
+21:27:40.133 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<< 
+21:27:40.133 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK Debug  <<<<<<<<<<<<< 
+21:27:40.133 [main] INFO  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK info  <<<<<<<<<<<<< 
+21:27:40.133 [main] WARN  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK warn  <<<<<<<<<<<<< 
+21:27:40.133 [main] ERROR com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK err  <<<<<<<<<<<<< 
+21:27:40.134 [main] INFO  com.lk.Application - Started Application in 67.718 seconds (JVM running for 70.109) 
+21:50:57.859 [main] INFO  com.lk.Application - Starting Application on DESKTOP-1I98NIE with PID 10004 (D:\code\ws\mybatis-boot\target\classes started by root in D:\code\ws\mybatis-boot) 
+21:50:57.860 [main] DEBUG com.lk.Application - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE 
+21:50:57.860 [main] INFO  com.lk.Application - No active profile set, falling back to default profiles: default 
+21:51:00.272 [main] INFO  com.lk.MyWebAppConfigurer - C:\Program Files\Java\jdk1.8.0_151 
+21:51:00.272 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ true 
+21:51:00.272 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ null 
+21:51:00.273 [main] INFO  com.lk.MyWebAppConfigurer - classpath:mybatis/mapper/*.xml 
+21:51:00.273 [main] INFO  com.lk.MyWebAppConfigurer - debug 
+21:51:01.862 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<< 
+21:51:01.863 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK Debug  <<<<<<<<<<<<< 
+21:51:01.863 [main] INFO  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK info  <<<<<<<<<<<<< 
+21:51:01.863 [main] WARN  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK warn  <<<<<<<<<<<<< 
+21:51:01.863 [main] ERROR com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK err  <<<<<<<<<<<<< 
+21:51:01.864 [main] INFO  com.lk.Application - Started Application in 4.313 seconds (JVM running for 4.745) 
+21:57:05.301 [main] INFO  com.lk.Application - Starting Application on DESKTOP-1I98NIE with PID 8048 (D:\code\ws\mybatis-boot\target\classes started by root in D:\code\ws\mybatis-boot) 
+21:57:05.301 [main] DEBUG com.lk.Application - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE 
+21:57:05.301 [main] INFO  com.lk.Application - No active profile set, falling back to default profiles: default 
+21:57:07.513 [main] INFO  com.lk.MyWebAppConfigurer - C:\Program Files\Java\jdk1.8.0_151 
+21:57:07.513 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ true 
+21:57:07.513 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ null 
+21:57:07.513 [main] INFO  com.lk.MyWebAppConfigurer - classpath:mybatis/mapper/*.xml 
+21:57:07.514 [main] INFO  com.lk.MyWebAppConfigurer - debug 
+21:57:09.083 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<< 
+21:57:09.083 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK Debug  <<<<<<<<<<<<< 
+21:57:09.083 [main] INFO  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK info  <<<<<<<<<<<<< 
+21:57:09.083 [main] WARN  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK warn  <<<<<<<<<<<<< 
+21:57:09.083 [main] ERROR com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK err  <<<<<<<<<<<<< 
+21:57:09.084 [main] INFO  com.lk.Application - Started Application in 4.078 seconds (JVM running for 4.351) 
+21:58:36.286 [main] INFO  com.lk.Application - Starting Application on DESKTOP-1I98NIE with PID 15852 (D:\code\ws\mybatis-boot\target\classes started by root in D:\code\ws\mybatis-boot) 
+21:58:36.286 [main] DEBUG com.lk.Application - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE 
+21:58:36.286 [main] INFO  com.lk.Application - No active profile set, falling back to default profiles: default 
+21:58:38.382 [main] INFO  com.lk.MyWebAppConfigurer - C:\Program Files\Java\jdk1.8.0_151 
+21:58:38.382 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ true 
+21:58:38.382 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ null 
+21:58:38.382 [main] INFO  com.lk.MyWebAppConfigurer - classpath:mybatis/mapper/*.xml 
+21:58:38.382 [main] INFO  com.lk.MyWebAppConfigurer - debug 
+21:58:39.932 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<< 
+21:58:39.932 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK Debug  <<<<<<<<<<<<< 
+21:58:39.932 [main] INFO  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK info  <<<<<<<<<<<<< 
+21:58:39.932 [main] WARN  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK warn  <<<<<<<<<<<<< 
+21:58:39.932 [main] ERROR com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK err  <<<<<<<<<<<<< 
+21:58:39.933 [main] INFO  com.lk.Application - Started Application in 3.954 seconds (JVM running for 4.224) 
+21:59:37.521 [main] INFO  com.lk.Application - Starting Application on DESKTOP-1I98NIE with PID 15536 (D:\code\ws\mybatis-boot\target\classes started by root in D:\code\ws\mybatis-boot) 
+21:59:37.521 [main] DEBUG com.lk.Application - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE 
+21:59:37.521 [main] INFO  com.lk.Application - No active profile set, falling back to default profiles: default 
+21:59:39.679 [main] INFO  com.lk.MyWebAppConfigurer - C:\Program Files\Java\jdk1.8.0_151 
+21:59:39.679 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ true 
+21:59:39.679 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ null 
+21:59:39.679 [main] INFO  com.lk.MyWebAppConfigurer - classpath:mybatis/mapper/*.xml 
+21:59:39.680 [main] INFO  com.lk.MyWebAppConfigurer - debug 
+21:59:41.227 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<< 
+21:59:41.227 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK Debug  <<<<<<<<<<<<< 
+21:59:41.227 [main] INFO  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK info  <<<<<<<<<<<<< 
+21:59:41.227 [main] WARN  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK warn  <<<<<<<<<<<<< 
+21:59:41.227 [main] ERROR com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK err  <<<<<<<<<<<<< 
+21:59:41.228 [main] INFO  com.lk.Application - Started Application in 4.021 seconds (JVM running for 4.288) 
+22:00:36.153 [main] INFO  com.lk.Application - Starting Application on DESKTOP-1I98NIE with PID 7672 (D:\code\ws\mybatis-boot\target\classes started by root in D:\code\ws\mybatis-boot) 
+22:00:36.153 [main] DEBUG com.lk.Application - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE 
+22:00:36.154 [main] INFO  com.lk.Application - No active profile set, falling back to default profiles: default 
+22:00:38.397 [main] INFO  com.lk.MyWebAppConfigurer - C:\Program Files\Java\jdk1.8.0_151 
+22:00:38.398 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ true 
+22:00:38.399 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ null 
+22:00:38.399 [main] INFO  com.lk.MyWebAppConfigurer - classpath:mybatis/mapper/*.xml 
+22:00:38.400 [main] INFO  com.lk.MyWebAppConfigurer - debug 
+22:00:39.980 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<< 
+22:00:39.980 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK Debug  <<<<<<<<<<<<< 
+22:00:39.980 [main] INFO  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK info  <<<<<<<<<<<<< 
+22:00:39.980 [main] WARN  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK warn  <<<<<<<<<<<<< 
+22:00:39.980 [main] ERROR com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK err  <<<<<<<<<<<<< 
+22:00:39.981 [main] INFO  com.lk.Application - Started Application in 4.199 seconds (JVM running for 4.521) 
+22:00:46.635 [main] INFO  com.lk.Application - Starting Application on DESKTOP-1I98NIE with PID 1356 (D:\code\ws\mybatis-boot\target\classes started by root in D:\code\ws\mybatis-boot) 
+22:00:46.635 [main] DEBUG com.lk.Application - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE 
+22:00:46.636 [main] INFO  com.lk.Application - No active profile set, falling back to default profiles: default 
+22:00:48.712 [main] INFO  com.lk.MyWebAppConfigurer - C:\Program Files\Java\jdk1.8.0_151 
+22:00:48.712 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ true 
+22:00:48.712 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ null 
+22:00:48.713 [main] INFO  com.lk.MyWebAppConfigurer - classpath:mybatis/mapper/*.xml 
+22:00:48.713 [main] INFO  com.lk.MyWebAppConfigurer - debug 
+22:00:50.244 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<< 
+22:00:50.245 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK Debug  <<<<<<<<<<<<< 
+22:00:50.245 [main] INFO  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK info  <<<<<<<<<<<<< 
+22:00:50.245 [main] WARN  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK warn  <<<<<<<<<<<<< 
+22:00:50.245 [main] ERROR com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK err  <<<<<<<<<<<<< 
+22:00:50.245 [main] INFO  com.lk.Application - Started Application in 3.905 seconds (JVM running for 4.177) 
+22:01:06.657 [main] INFO  com.lk.Application - Starting Application on DESKTOP-1I98NIE with PID 820 (D:\code\ws\mybatis-boot\target\classes started by root in D:\code\ws\mybatis-boot) 
+22:01:06.657 [main] DEBUG com.lk.Application - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE 
+22:01:06.657 [main] INFO  com.lk.Application - No active profile set, falling back to default profiles: default 
+22:01:08.784 [main] INFO  com.lk.MyWebAppConfigurer - C:\Program Files\Java\jdk1.8.0_151 
+22:01:08.784 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ true 
+22:01:08.784 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ null 
+22:01:08.786 [main] INFO  com.lk.MyWebAppConfigurer - classpath:mybatis/mapper/*.xml 
+22:01:08.792 [main] INFO  com.lk.MyWebAppConfigurer - debug 
+22:01:10.311 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<< 
+22:01:10.311 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK Debug  <<<<<<<<<<<<< 
+22:01:10.311 [main] INFO  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK info  <<<<<<<<<<<<< 
+22:01:10.311 [main] WARN  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK warn  <<<<<<<<<<<<< 
+22:01:10.311 [main] ERROR com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK err  <<<<<<<<<<<<< 
+22:01:10.313 [main] INFO  com.lk.Application - Started Application in 3.951 seconds (JVM running for 4.213) 
+22:01:51.588 [main] INFO  com.lk.Application - Starting Application on DESKTOP-1I98NIE with PID 14864 (D:\code\ws\mybatis-boot\target\classes started by root in D:\code\ws\mybatis-boot) 
+22:01:51.588 [main] DEBUG com.lk.Application - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE 
+22:01:51.588 [main] INFO  com.lk.Application - No active profile set, falling back to default profiles: default 
+22:01:53.692 [main] INFO  com.lk.MyWebAppConfigurer - C:\Program Files\Java\jdk1.8.0_151 
+22:01:53.693 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ true 
+22:01:53.693 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ null 
+22:01:53.693 [main] INFO  com.lk.MyWebAppConfigurer - classpath:mybatis/mapper/*.xml 
+22:01:53.693 [main] INFO  com.lk.MyWebAppConfigurer - debug 
+22:01:55.239 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<< 
+22:01:55.239 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK Debug  <<<<<<<<<<<<< 
+22:01:55.239 [main] INFO  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK info  <<<<<<<<<<<<< 
+22:01:55.239 [main] WARN  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK warn  <<<<<<<<<<<<< 
+22:01:55.239 [main] ERROR com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK err  <<<<<<<<<<<<< 
+22:01:55.240 [main] INFO  com.lk.Application - Started Application in 3.943 seconds (JVM running for 4.204) 
+22:05:01.145 [main] INFO  com.lk.Application - Starting Application on DESKTOP-1I98NIE with PID 11836 (D:\code\ws\mybatis-boot\target\classes started by root in D:\code\ws\mybatis-boot) 
+22:05:01.145 [main] DEBUG com.lk.Application - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE 
+22:05:01.145 [main] INFO  com.lk.Application - No active profile set, falling back to default profiles: default 
+22:05:03.230 [main] INFO  com.lk.MyWebAppConfigurer - C:\Program Files\Java\jdk1.8.0_151 
+22:05:03.231 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ true 
+22:05:03.231 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ null 
+22:05:03.231 [main] INFO  com.lk.MyWebAppConfigurer - classpath:mybatis/mapper/*.xml 
+22:05:03.231 [main] INFO  com.lk.MyWebAppConfigurer - debug 
+22:05:04.816 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<< 
+22:05:04.817 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK Debug  <<<<<<<<<<<<< 
+22:05:04.817 [main] INFO  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK info  <<<<<<<<<<<<< 
+22:05:04.817 [main] WARN  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK warn  <<<<<<<<<<<<< 
+22:05:04.817 [main] ERROR com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK err  <<<<<<<<<<<<< 
+22:05:04.818 [main] INFO  com.lk.Application - Started Application in 3.968 seconds (JVM running for 4.237) 
+22:21:31.162 [main] INFO  com.lk.Application - Starting Application on DESKTOP-1I98NIE with PID 14084 (D:\code\ws\mybatis-boot\target\classes started by root in D:\code\ws\mybatis-boot) 
+22:21:31.162 [main] DEBUG com.lk.Application - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE 
+22:21:31.162 [main] INFO  com.lk.Application - No active profile set, falling back to default profiles: default 
+22:21:33.215 [main] INFO  com.lk.MyWebAppConfigurer - C:\Program Files\Java\jdk1.8.0_151 
+22:21:33.216 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ true 
+22:21:33.216 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ null 
+22:21:33.216 [main] INFO  com.lk.MyWebAppConfigurer - classpath:mybatis/mapper/*.xml 
+22:21:33.216 [main] INFO  com.lk.MyWebAppConfigurer - debug 
+22:21:34.746 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<< 
+22:21:34.746 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK Debug  <<<<<<<<<<<<< 
+22:21:34.746 [main] INFO  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK info  <<<<<<<<<<<<< 
+22:21:34.746 [main] WARN  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK warn  <<<<<<<<<<<<< 
+22:21:34.746 [main] ERROR com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK err  <<<<<<<<<<<<< 
+22:21:34.747 [main] INFO  com.lk.Application - Started Application in 3.874 seconds (JVM running for 4.13) 
+22:22:52.612 [main] INFO  com.lk.Application - Starting Application on DESKTOP-1I98NIE with PID 15936 (D:\code\ws\mybatis-boot\target\classes started by root in D:\code\ws\mybatis-boot) 
+22:22:52.612 [main] DEBUG com.lk.Application - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE 
+22:22:52.612 [main] INFO  com.lk.Application - No active profile set, falling back to default profiles: default 
+22:22:54.871 [main] INFO  com.lk.MyWebAppConfigurer - C:\Program Files\Java\jdk1.8.0_151 
+22:22:54.872 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ true 
+22:22:54.872 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ null 
+22:22:54.872 [main] INFO  com.lk.MyWebAppConfigurer - classpath:mybatis/mapper/*.xml 
+22:22:54.872 [main] INFO  com.lk.MyWebAppConfigurer - debug 
+22:22:56.395 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<< 
+22:22:56.395 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK Debug  <<<<<<<<<<<<< 
+22:22:56.396 [main] INFO  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK info  <<<<<<<<<<<<< 
+22:22:56.396 [main] WARN  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK warn  <<<<<<<<<<<<< 
+22:22:56.396 [main] ERROR com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK err  <<<<<<<<<<<<< 
+22:22:56.396 [main] INFO  com.lk.Application - Started Application in 4.085 seconds (JVM running for 4.401) 
+22:24:22.450 [main] INFO  com.lk.Application - Starting Application on DESKTOP-1I98NIE with PID 13072 (D:\code\ws\mybatis-boot\target\classes started by root in D:\code\ws\mybatis-boot) 
+22:24:22.451 [main] DEBUG com.lk.Application - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE 
+22:24:22.452 [main] INFO  com.lk.Application - No active profile set, falling back to default profiles: default 
+22:24:24.592 [main] INFO  com.lk.MyWebAppConfigurer - C:\Program Files\Java\jdk1.8.0_151 
+22:24:24.593 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ true 
+22:24:24.593 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ null 
+22:24:24.593 [main] INFO  com.lk.MyWebAppConfigurer - classpath:mybatis/mapper/*.xml 
+22:24:24.594 [main] INFO  com.lk.MyWebAppConfigurer - debug 
+22:24:26.186 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<< 
+22:24:26.186 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK Debug  <<<<<<<<<<<<< 
+22:24:26.186 [main] INFO  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK info  <<<<<<<<<<<<< 
+22:24:26.186 [main] WARN  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK warn  <<<<<<<<<<<<< 
+22:24:26.186 [main] ERROR com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK err  <<<<<<<<<<<<< 
+22:24:26.188 [main] INFO  com.lk.Application - Started Application in 4.038 seconds (JVM running for 4.309) 
+22:25:17.244 [main] INFO  com.lk.Application - Starting Application on DESKTOP-1I98NIE with PID 15452 (D:\code\ws\mybatis-boot\target\classes started by root in D:\code\ws\mybatis-boot) 
+22:25:17.244 [main] DEBUG com.lk.Application - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE 
+22:25:17.244 [main] INFO  com.lk.Application - No active profile set, falling back to default profiles: default 
+22:25:19.459 [main] INFO  com.lk.MyWebAppConfigurer - C:\Program Files\Java\jdk1.8.0_151 
+22:25:19.459 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ true 
+22:25:19.459 [main] INFO  com.lk.MyWebAppConfigurer - setEnvironment ++ null 
+22:25:19.459 [main] INFO  com.lk.MyWebAppConfigurer - classpath:mybatis/mapper/*.xml 
+22:25:19.459 [main] INFO  com.lk.MyWebAppConfigurer - debug 
+22:25:21.547 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作 11111111 <<<<<<<<<<<<< 
+22:25:21.548 [main] DEBUG com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK Debug  <<<<<<<<<<<<< 
+22:25:21.548 [main] INFO  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK info  <<<<<<<<<<<<< 
+22:25:21.548 [main] WARN  com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK warn  <<<<<<<<<<<<< 
+22:25:21.548 [main] ERROR com.lk.MyStartupRunner1 - >>>>>>>>>>>>>>> LK err  <<<<<<<<<<<<< 
+22:25:21.548 [main] INFO  com.lk.Application - Started Application in 4.616 seconds (JVM running for 4.907) 

@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="me.mybatis.dao.UserMapper">
+    <resultMap id="BaseResultMap" type="me.mybatis.domain.User">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="customerId" property="customerid" jdbcType="BIGINT"/>
+        <result column="QQ" property="qq" jdbcType="VARCHAR"/>
+        <result column="WECHAT" property="wechat" jdbcType="VARCHAR"/>
+        <result column="whether_fill_property_info" property="whetherFillPropertyInfo" jdbcType="TINYINT"/>
+        <result column="whether_purchase_financing" property="whetherPurchaseFinancing" jdbcType="TINYINT"/>
+        <result column="mobile" property="mobile" jdbcType="VARCHAR"/>
+        <result column="BANK_RESERVEMOBILE" property="bankReservemobile" jdbcType="VARCHAR"/>
+        <result column="mobf3" property="mobf3" jdbcType="TINYINT"/>
+        <result column="whether_change_mobile_number" property="whetherChangeMobileNumber" jdbcType="TINYINT"/>
+        <result column="EMERGENCY_TEL" property="emergencyTel" jdbcType="VARCHAR"/>
+        <result column="emergency_contact_mobf3" property="emergencyContactMobf3" jdbcType="TINYINT"/>
+        <result column="employee_or_salesman" property="employeeOrSalesman" jdbcType="TINYINT"/>
+        <result column="employee_createtime" property="employeeCreatetime" jdbcType="VARCHAR"/>
+        <result column="employee_workstate" property="employeeWorkstate" jdbcType="TINYINT"/>
+        <result column="employee_level" property="employeeLevel" jdbcType="SMALLINT"/>
+        <result column="BORROW_TYPE_NAME" property="borrowTypeName" jdbcType="VARCHAR"/>
+        <result column="refused_times" property="refusedTimes" jdbcType="INTEGER"/>
+        <result column="returned_times" property="returnedTimes" jdbcType="INTEGER"/>
+        <result column="SALESMAN_ID" property="salesmanId" jdbcType="BIGINT"/>
+        <result column="SALESMAN_MOBILE" property="salesmanMobile" jdbcType="VARCHAR"/>
+        <result column="SALESMAN_NAME" property="salesmanName" jdbcType="VARCHAR"/>
+        <result column="DEPT_CODE" property="deptCode" jdbcType="VARCHAR"/>
+        <result column="DEPT_NAME" property="deptName" jdbcType="VARCHAR"/>
+        <result column="last_limit_improve_time" property="lastLimitImproveTime" jdbcType="TIMESTAMP"/>
+        <result column="applyCardScore" property="applycardscore" jdbcType="INTEGER"/>
+        <result column="score" property="score" jdbcType="INTEGER"/>
+        <result column="approveAmount" property="approveamount" jdbcType="BIGINT"/>
+        <result column="reason" property="reason" jdbcType="VARCHAR"/>
+        <result column="cdate" property="cdate" jdbcType="TIMESTAMP"/>
+        <result column="edate" property="edate" jdbcType="TIMESTAMP"/>
+        <result column="creator" property="creator" jdbcType="VARCHAR"/>
+        <result column="editor" property="editor" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="CHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, customerId, QQ, WECHAT, whether_fill_property_info, whether_purchase_financing,
+        mobile, BANK_RESERVEMOBILE, mobf3, whether_change_mobile_number, EMERGENCY_TEL, emergency_contact_mobf3,
+        employee_or_salesman, employee_createtime, employee_workstate, employee_level, BORROW_TYPE_NAME,
+        refused_times, returned_times, SALESMAN_ID, SALESMAN_MOBILE, SALESMAN_NAME, DEPT_CODE,
+        DEPT_NAME, last_limit_improve_time, applyCardScore, score, approveAmount, reason,
+        cdate, edate, creator, editor, status
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from tbVar_property_quato
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from tbVar_property_quato
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
+    <insert id="insert" parameterType="me.mybatis.domain.User">
+        insert into tbVar_property_quato (id, customerId, QQ,
+        WECHAT, whether_fill_property_info, whether_purchase_financing,
+        mobile, BANK_RESERVEMOBILE, mobf3,
+        whether_change_mobile_number, EMERGENCY_TEL,
+        emergency_contact_mobf3, employee_or_salesman,
+        employee_createtime, employee_workstate,
+        employee_level, BORROW_TYPE_NAME, refused_times,
+        returned_times, SALESMAN_ID, SALESMAN_MOBILE,
+        SALESMAN_NAME, DEPT_CODE, DEPT_NAME,
+        last_limit_improve_time, applyCardScore,
+        score, approveAmount, reason,
+        cdate, edate, creator,
+        editor, status)
+        values (#{id,jdbcType=BIGINT}, #{customerid,jdbcType=BIGINT}, #{qq,jdbcType=VARCHAR},
+        #{wechat,jdbcType=VARCHAR}, #{whetherFillPropertyInfo,jdbcType=TINYINT},
+        #{whetherPurchaseFinancing,jdbcType=TINYINT},
+        #{mobile,jdbcType=VARCHAR}, #{bankReservemobile,jdbcType=VARCHAR}, #{mobf3,jdbcType=TINYINT},
+        #{whetherChangeMobileNumber,jdbcType=TINYINT}, #{emergencyTel,jdbcType=VARCHAR},
+        #{emergencyContactMobf3,jdbcType=TINYINT}, #{employeeOrSalesman,jdbcType=TINYINT},
+        #{employeeCreatetime,jdbcType=VARCHAR}, #{employeeWorkstate,jdbcType=TINYINT},
+        #{employeeLevel,jdbcType=SMALLINT}, #{borrowTypeName,jdbcType=VARCHAR}, #{refusedTimes,jdbcType=INTEGER},
+        #{returnedTimes,jdbcType=INTEGER}, #{salesmanId,jdbcType=BIGINT}, #{salesmanMobile,jdbcType=VARCHAR},
+        #{salesmanName,jdbcType=VARCHAR}, #{deptCode,jdbcType=VARCHAR}, #{deptName,jdbcType=VARCHAR},
+        #{lastLimitImproveTime,jdbcType=TIMESTAMP}, #{applycardscore,jdbcType=INTEGER},
+        #{score,jdbcType=INTEGER}, #{approveamount,jdbcType=BIGINT}, #{reason,jdbcType=VARCHAR},
+        #{cdate,jdbcType=TIMESTAMP}, #{edate,jdbcType=TIMESTAMP}, #{creator,jdbcType=VARCHAR},
+        #{editor,jdbcType=VARCHAR}, #{status,jdbcType=CHAR})
+    </insert>
+    <insert id="insertSelective" parameterType="me.mybatis.domain.User">
+        insert into tbVar_property_quato
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="customerid != null">
+                customerId,
+            </if>
+            <if test="qq != null">
+                QQ,
+            </if>
+            <if test="wechat != null">
+                WECHAT,
+            </if>
+            <if test="whetherFillPropertyInfo != null">
+                whether_fill_property_info,
+            </if>
+            <if test="whetherPurchaseFinancing != null">
+                whether_purchase_financing,
+            </if>
+            <if test="mobile != null">
+                mobile,
+            </if>
+            <if test="bankReservemobile != null">
+                BANK_RESERVEMOBILE,
+            </if>
+            <if test="mobf3 != null">
+                mobf3,
+            </if>
+            <if test="whetherChangeMobileNumber != null">
+                whether_change_mobile_number,
+            </if>
+            <if test="emergencyTel != null">
+                EMERGENCY_TEL,
+            </if>
+            <if test="emergencyContactMobf3 != null">
+                emergency_contact_mobf3,
+            </if>
+            <if test="employeeOrSalesman != null">
+                employee_or_salesman,
+            </if>
+            <if test="employeeCreatetime != null">
+                employee_createtime,
+            </if>
+            <if test="employeeWorkstate != null">
+                employee_workstate,
+            </if>
+            <if test="employeeLevel != null">
+                employee_level,
+            </if>
+            <if test="borrowTypeName != null">
+                BORROW_TYPE_NAME,
+            </if>
+            <if test="refusedTimes != null">
+                refused_times,
+            </if>
+            <if test="returnedTimes != null">
+                returned_times,
+            </if>
+            <if test="salesmanId != null">
+                SALESMAN_ID,
+            </if>
+            <if test="salesmanMobile != null">
+                SALESMAN_MOBILE,
+            </if>
+            <if test="salesmanName != null">
+                SALESMAN_NAME,
+            </if>
+            <if test="deptCode != null">
+                DEPT_CODE,
+            </if>
+            <if test="deptName != null">
+                DEPT_NAME,
+            </if>
+            <if test="lastLimitImproveTime != null">
+                last_limit_improve_time,
+            </if>
+            <if test="applycardscore != null">
+                applyCardScore,
+            </if>
+            <if test="score != null">
+                score,
+            </if>
+            <if test="approveamount != null">
+                approveAmount,
+            </if>
+            <if test="reason != null">
+                reason,
+            </if>
+            <if test="cdate != null">
+                cdate,
+            </if>
+            <if test="edate != null">
+                edate,
+            </if>
+            <if test="creator != null">
+                creator,
+            </if>
+            <if test="editor != null">
+                editor,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="customerid != null">
+                #{customerid,jdbcType=BIGINT},
+            </if>
+            <if test="qq != null">
+                #{qq,jdbcType=VARCHAR},
+            </if>
+            <if test="wechat != null">
+                #{wechat,jdbcType=VARCHAR},
+            </if>
+            <if test="whetherFillPropertyInfo != null">
+                #{whetherFillPropertyInfo,jdbcType=TINYINT},
+            </if>
+            <if test="whetherPurchaseFinancing != null">
+                #{whetherPurchaseFinancing,jdbcType=TINYINT},
+            </if>
+            <if test="mobile != null">
+                #{mobile,jdbcType=VARCHAR},
+            </if>
+            <if test="bankReservemobile != null">
+                #{bankReservemobile,jdbcType=VARCHAR},
+            </if>
+            <if test="mobf3 != null">
+                #{mobf3,jdbcType=TINYINT},
+            </if>
+            <if test="whetherChangeMobileNumber != null">
+                #{whetherChangeMobileNumber,jdbcType=TINYINT},
+            </if>
+            <if test="emergencyTel != null">
+                #{emergencyTel,jdbcType=VARCHAR},
+            </if>
+            <if test="emergencyContactMobf3 != null">
+                #{emergencyContactMobf3,jdbcType=TINYINT},
+            </if>
+            <if test="employeeOrSalesman != null">
+                #{employeeOrSalesman,jdbcType=TINYINT},
+            </if>
+            <if test="employeeCreatetime != null">
+                #{employeeCreatetime,jdbcType=VARCHAR},
+            </if>
+            <if test="employeeWorkstate != null">
+                #{employeeWorkstate,jdbcType=TINYINT},
+            </if>
+            <if test="employeeLevel != null">
+                #{employeeLevel,jdbcType=SMALLINT},
+            </if>
+            <if test="borrowTypeName != null">
+                #{borrowTypeName,jdbcType=VARCHAR},
+            </if>
+            <if test="refusedTimes != null">
+                #{refusedTimes,jdbcType=INTEGER},
+            </if>
+            <if test="returnedTimes != null">
+                #{returnedTimes,jdbcType=INTEGER},
+            </if>
+            <if test="salesmanId != null">
+                #{salesmanId,jdbcType=BIGINT},
+            </if>
+            <if test="salesmanMobile != null">
+                #{salesmanMobile,jdbcType=VARCHAR},
+            </if>
+            <if test="salesmanName != null">
+                #{salesmanName,jdbcType=VARCHAR},
+            </if>
+            <if test="deptCode != null">
+                #{deptCode,jdbcType=VARCHAR},
+            </if>
+            <if test="deptName != null">
+                #{deptName,jdbcType=VARCHAR},
+            </if>
+            <if test="lastLimitImproveTime != null">
+                #{lastLimitImproveTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="applycardscore != null">
+                #{applycardscore,jdbcType=INTEGER},
+            </if>
+            <if test="score != null">
+                #{score,jdbcType=INTEGER},
+            </if>
+            <if test="approveamount != null">
+                #{approveamount,jdbcType=BIGINT},
+            </if>
+            <if test="reason != null">
+                #{reason,jdbcType=VARCHAR},
+            </if>
+            <if test="cdate != null">
+                #{cdate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="edate != null">
+                #{edate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="creator != null">
+                #{creator,jdbcType=VARCHAR},
+            </if>
+            <if test="editor != null">
+                #{editor,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=CHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="me.mybatis.domain.User">
+        update tbVar_property_quato
+        <set>
+            <if test="customerid != null">
+                customerId = #{customerid,jdbcType=BIGINT},
+            </if>
+            <if test="qq != null">
+                QQ = #{qq,jdbcType=VARCHAR},
+            </if>
+            <if test="wechat != null">
+                WECHAT = #{wechat,jdbcType=VARCHAR},
+            </if>
+            <if test="whetherFillPropertyInfo != null">
+                whether_fill_property_info = #{whetherFillPropertyInfo,jdbcType=TINYINT},
+            </if>
+            <if test="whetherPurchaseFinancing != null">
+                whether_purchase_financing = #{whetherPurchaseFinancing,jdbcType=TINYINT},
+            </if>
+            <if test="mobile != null">
+                mobile = #{mobile,jdbcType=VARCHAR},
+            </if>
+            <if test="bankReservemobile != null">
+                BANK_RESERVEMOBILE = #{bankReservemobile,jdbcType=VARCHAR},
+            </if>
+            <if test="mobf3 != null">
+                mobf3 = #{mobf3,jdbcType=TINYINT},
+            </if>
+            <if test="whetherChangeMobileNumber != null">
+                whether_change_mobile_number = #{whetherChangeMobileNumber,jdbcType=TINYINT},
+            </if>
+            <if test="emergencyTel != null">
+                EMERGENCY_TEL = #{emergencyTel,jdbcType=VARCHAR},
+            </if>
+            <if test="emergencyContactMobf3 != null">
+                emergency_contact_mobf3 = #{emergencyContactMobf3,jdbcType=TINYINT},
+            </if>
+            <if test="employeeOrSalesman != null">
+                employee_or_salesman = #{employeeOrSalesman,jdbcType=TINYINT},
+            </if>
+            <if test="employeeCreatetime != null">
+                employee_createtime = #{employeeCreatetime,jdbcType=VARCHAR},
+            </if>
+            <if test="employeeWorkstate != null">
+                employee_workstate = #{employeeWorkstate,jdbcType=TINYINT},
+            </if>
+            <if test="employeeLevel != null">
+                employee_level = #{employeeLevel,jdbcType=SMALLINT},
+            </if>
+            <if test="borrowTypeName != null">
+                BORROW_TYPE_NAME = #{borrowTypeName,jdbcType=VARCHAR},
+            </if>
+            <if test="refusedTimes != null">
+                refused_times = #{refusedTimes,jdbcType=INTEGER},
+            </if>
+            <if test="returnedTimes != null">
+                returned_times = #{returnedTimes,jdbcType=INTEGER},
+            </if>
+            <if test="salesmanId != null">
+                SALESMAN_ID = #{salesmanId,jdbcType=BIGINT},
+            </if>
+            <if test="salesmanMobile != null">
+                SALESMAN_MOBILE = #{salesmanMobile,jdbcType=VARCHAR},
+            </if>
+            <if test="salesmanName != null">
+                SALESMAN_NAME = #{salesmanName,jdbcType=VARCHAR},
+            </if>
+            <if test="deptCode != null">
+                DEPT_CODE = #{deptCode,jdbcType=VARCHAR},
+            </if>
+            <if test="deptName != null">
+                DEPT_NAME = #{deptName,jdbcType=VARCHAR},
+            </if>
+            <if test="lastLimitImproveTime != null">
+                last_limit_improve_time = #{lastLimitImproveTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="applycardscore != null">
+                applyCardScore = #{applycardscore,jdbcType=INTEGER},
+            </if>
+            <if test="score != null">
+                score = #{score,jdbcType=INTEGER},
+            </if>
+            <if test="approveamount != null">
+                approveAmount = #{approveamount,jdbcType=BIGINT},
+            </if>
+            <if test="reason != null">
+                reason = #{reason,jdbcType=VARCHAR},
+            </if>
+            <if test="cdate != null">
+                cdate = #{cdate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="edate != null">
+                edate = #{edate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="creator != null">
+                creator = #{creator,jdbcType=VARCHAR},
+            </if>
+            <if test="editor != null">
+                editor = #{editor,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=CHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="me.mybatis.domain.User">
+        update tbVar_property_quato
+        set customerId = #{customerid,jdbcType=BIGINT},
+        QQ = #{qq,jdbcType=VARCHAR},
+        WECHAT = #{wechat,jdbcType=VARCHAR},
+        whether_fill_property_info = #{whetherFillPropertyInfo,jdbcType=TINYINT},
+        whether_purchase_financing = #{whetherPurchaseFinancing,jdbcType=TINYINT},
+        mobile = #{mobile,jdbcType=VARCHAR},
+        BANK_RESERVEMOBILE = #{bankReservemobile,jdbcType=VARCHAR},
+        mobf3 = #{mobf3,jdbcType=TINYINT},
+        whether_change_mobile_number = #{whetherChangeMobileNumber,jdbcType=TINYINT},
+        EMERGENCY_TEL = #{emergencyTel,jdbcType=VARCHAR},
+        emergency_contact_mobf3 = #{emergencyContactMobf3,jdbcType=TINYINT},
+        employee_or_salesman = #{employeeOrSalesman,jdbcType=TINYINT},
+        employee_createtime = #{employeeCreatetime,jdbcType=VARCHAR},
+        employee_workstate = #{employeeWorkstate,jdbcType=TINYINT},
+        employee_level = #{employeeLevel,jdbcType=SMALLINT},
+        BORROW_TYPE_NAME = #{borrowTypeName,jdbcType=VARCHAR},
+        refused_times = #{refusedTimes,jdbcType=INTEGER},
+        returned_times = #{returnedTimes,jdbcType=INTEGER},
+        SALESMAN_ID = #{salesmanId,jdbcType=BIGINT},
+        SALESMAN_MOBILE = #{salesmanMobile,jdbcType=VARCHAR},
+        SALESMAN_NAME = #{salesmanName,jdbcType=VARCHAR},
+        DEPT_CODE = #{deptCode,jdbcType=VARCHAR},
+        DEPT_NAME = #{deptName,jdbcType=VARCHAR},
+        last_limit_improve_time = #{lastLimitImproveTime,jdbcType=TIMESTAMP},
+        applyCardScore = #{applycardscore,jdbcType=INTEGER},
+        score = #{score,jdbcType=INTEGER},
+        approveAmount = #{approveamount,jdbcType=BIGINT},
+        reason = #{reason,jdbcType=VARCHAR},
+        cdate = #{cdate,jdbcType=TIMESTAMP},
+        edate = #{edate,jdbcType=TIMESTAMP},
+        creator = #{creator,jdbcType=VARCHAR},
+        editor = #{editor,jdbcType=VARCHAR},
+        status = #{status,jdbcType=CHAR}
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+</mapper>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lk.mapper_ds3.UserMapper3" >
+    <resultMap id="BaseResultMap" type="com.lk.UserEntity" >
+        <id column="id" property="id" jdbcType="BIGINT" />
+        <result column="userName" property="userName" jdbcType="VARCHAR" />
+        <result column="passWord" property="passWord" jdbcType="VARCHAR" />
+        <result column="user_sex" property="userSex" javaType="com.lk.UserSexEnum"/>
+        <result column="nick_name" property="nickName" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <select id="getLimitQuatoBaseInfo3" parameterType="java.lang.Long" resultType="java.util.Map">
+        select QQ,WECHAT,BANK_RESERVEMOBILE,case when substr(BANK_RESERVEMOBILE,1,3)
+            in (170,171,177) then 1 else 0 end "emergency_contact_mobf3",EMERGENCY_TEL,BORROW_TYPE_NAME,
+            (select count(*) from app_credit_apply.t_credit where
+            id in(select id from  app_credit_apply.t_customer where user_id= #{customer_id} ) and APPLY_TYPE=1 and CREDIT_STATUS=3) "refused_times",
+            (select count(*) from app_credit_apply.t_credit where
+            id in(select id from  app_credit_apply.t_customer where user_id= #{customer_id} ) and APPLY_TYPE=1 and CREDIT_STATUS=2) "returned_times",
+            SALESMAN_ID,
+            SALESMAN_MOBILE,
+            SALESMAN_NAME,
+            DEPT_CODE,
+            DEPT_NAME
+     from app_credit_apply.t_credit a where
+     id = (  select max(id_credit) from  app_credit_apply.t_customer where user_id=#{customer_id, jdbcType=INTEGER})
+
+    </select>
+
+</mapper>

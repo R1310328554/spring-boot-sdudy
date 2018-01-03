@@ -1,0 +1,1689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="me.mybatis.dao.VarBorrowRepayMapper">
+  <resultMap id="BaseResultMap" type="me.mybatis.domain.VarBorrowRepay">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="customer_id" jdbcType="BIGINT" property="customerId" />
+    <result column="loan_times" jdbcType="INTEGER" property="loanTimes" />
+    <result column="time_bet_firstloan_and_audit" jdbcType="INTEGER" property="timeBetFirstloanAndAudit" />
+    <result column="total_amount" jdbcType="BIGINT" property="totalAmount" />
+    <result column="fist_loan_strLoanDate" jdbcType="VARCHAR" property="fistLoanStrloandate" />
+    <result column="first_loan_amount" jdbcType="BIGINT" property="firstLoanAmount" />
+    <result column="first_loan_is_overdue" jdbcType="TINYINT" property="firstLoanIsOverdue" />
+    <result column="first_loan_over_due_days" jdbcType="INTEGER" property="firstLoanOverDueDays" />
+    <result column="first_loan_over_due_amount" jdbcType="BIGINT" property="firstLoanOverDueAmount" />
+    <result column="first_loan_is_prepay" jdbcType="TINYINT" property="firstLoanIsPrepay" />
+    <result column="first_loan_prepay_days" jdbcType="INTEGER" property="firstLoanPrepayDays" />
+    <result column="first_loan_prepay_amount" jdbcType="BIGINT" property="firstLoanPrepayAmount" />
+    <result column="last_loan_strLoanDate" jdbcType="VARCHAR" property="lastLoanStrloandate" />
+    <result column="last_loan_amount" jdbcType="BIGINT" property="lastLoanAmount" />
+    <result column="last_loan_is_overdue" jdbcType="TINYINT" property="lastLoanIsOverdue" />
+    <result column="last_loan_over_due_days" jdbcType="TINYINT" property="lastLoanOverDueDays" />
+    <result column="last_loan_over_due_amount" jdbcType="BIGINT" property="lastLoanOverDueAmount" />
+    <result column="last_loan_is_prepay" jdbcType="TINYINT" property="lastLoanIsPrepay" />
+    <result column="last_loan_prepay_days" jdbcType="INTEGER" property="lastLoanPrepayDays" />
+    <result column="last_loan_prepay_amount" jdbcType="BIGINT" property="lastLoanPrepayAmount" />
+    <result column="loan_times_in_x" jdbcType="INTEGER" property="loanTimesInX" />
+    <result column="total_amount_in_x" jdbcType="BIGINT" property="totalAmountInX" />
+    <result column="max_loanamount_in_x" jdbcType="BIGINT" property="maxLoanamountInX" />
+    <result column="x_prepay30_times" jdbcType="INTEGER" property="xPrepay30Times" />
+    <result column="x_prepay30_amount" jdbcType="BIGINT" property="xPrepay30Amount" />
+    <result column="max_x_prepay30_amount" jdbcType="BIGINT" property="maxXPrepay30Amount" />
+    <result column="x_prepay1_times" jdbcType="INTEGER" property="xPrepay1Times" />
+    <result column="x_prepay1_amount" jdbcType="BIGINT" property="xPrepay1Amount" />
+    <result column="max_x_prepay1_amount" jdbcType="BIGINT" property="maxXPrepay1Amount" />
+    <result column="x_prepay0_times" jdbcType="INTEGER" property="xPrepay0Times" />
+    <result column="x_prepay0_amount" jdbcType="BIGINT" property="xPrepay0Amount" />
+    <result column="max_x_prepay0_amount" jdbcType="BIGINT" property="maxXPrepay0Amount" />
+    <result column="x_prepay_sum_days" jdbcType="INTEGER" property="xPrepaySumDays" />
+    <result column="max_x_prepay_days" jdbcType="INTEGER" property="maxXPrepayDays" />
+    <result column="x_overdue_sum_days" jdbcType="INTEGER" property="xOverdueSumDays" />
+    <result column="max_x_overdue_days" jdbcType="INTEGER" property="maxXOverdueDays" />
+    <result column="x_overdue_times" jdbcType="INTEGER" property="xOverdueTimes" />
+    <result column="x_overdue_total_amount" jdbcType="BIGINT" property="xOverdueTotalAmount" />
+    <result column="max_x_overdue_total_amount" jdbcType="BIGINT" property="maxXOverdueTotalAmount" />
+    <result column="x_overdue_amount" jdbcType="BIGINT" property="xOverdueAmount" />
+    <result column="max_x_overdue_amount" jdbcType="BIGINT" property="maxXOverdueAmount" />
+    <result column="x_observation30_times" jdbcType="INTEGER" property="xObservation30Times" />
+    <result column="x_overdue30_times" jdbcType="INTEGER" property="xOverdue30Times" />
+    <result column="x_overdue30_total_amount" jdbcType="BIGINT" property="xOverdue30TotalAmount" />
+    <result column="max_x_overdue30_total_amount" jdbcType="BIGINT" property="maxXOverdue30TotalAmount" />
+    <result column="x_overdue30_amount" jdbcType="BIGINT" property="xOverdue30Amount" />
+    <result column="max_x_overdue30_amount" jdbcType="BIGINT" property="maxXOverdue30Amount" />
+    <result column="x_observation60_times" jdbcType="INTEGER" property="xObservation60Times" />
+    <result column="x_overdue60_times" jdbcType="INTEGER" property="xOverdue60Times" />
+    <result column="x_overdue60_total_amount" jdbcType="BIGINT" property="xOverdue60TotalAmount" />
+    <result column="max_x_overdue60_total_amount" jdbcType="BIGINT" property="maxXOverdue60TotalAmount" />
+    <result column="x_overdue60_amount" jdbcType="BIGINT" property="xOverdue60Amount" />
+    <result column="max_x_overdue60_amount" jdbcType="BIGINT" property="maxXOverdue60Amount" />
+    <result column="x_observation90_times" jdbcType="INTEGER" property="xObservation90Times" />
+    <result column="x_overdue90_times" jdbcType="INTEGER" property="xOverdue90Times" />
+    <result column="x_overdue90_total_amount" jdbcType="BIGINT" property="xOverdue90TotalAmount" />
+    <result column="max_x_overdue90_total_amount" jdbcType="BIGINT" property="maxXOverdue90TotalAmount" />
+    <result column="x_overdue90_amount" jdbcType="BIGINT" property="xOverdue90Amount" />
+    <result column="max_x_overdue90_amount" jdbcType="BIGINT" property="maxXOverdue90Amount" />
+    <result column="debt_overdue_days_max" jdbcType="INTEGER" property="debtOverdueDaysMax" />
+    <result column="x_debt" jdbcType="BIGINT" property="xDebt" />
+    <result column="x_debt_overdue" jdbcType="BIGINT" property="xDebtOverdue" />
+    <result column="cdate" jdbcType="TIMESTAMP" property="cdate" />
+    <result column="edate" jdbcType="TIMESTAMP" property="edate" />
+    <result column="creator" jdbcType="VARCHAR" property="creator" />
+    <result column="editor" jdbcType="VARCHAR" property="editor" />
+    <result column="status" jdbcType="CHAR" property="status" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, customer_id, loan_times, time_bet_firstloan_and_audit, total_amount, fist_loan_strLoanDate, 
+    first_loan_amount, first_loan_is_overdue, first_loan_over_due_days, first_loan_over_due_amount, 
+    first_loan_is_prepay, first_loan_prepay_days, first_loan_prepay_amount, last_loan_strLoanDate, 
+    last_loan_amount, last_loan_is_overdue, last_loan_over_due_days, last_loan_over_due_amount, 
+    last_loan_is_prepay, last_loan_prepay_days, last_loan_prepay_amount, loan_times_in_x, 
+    total_amount_in_x, max_loanamount_in_x, x_prepay30_times, x_prepay30_amount, max_x_prepay30_amount, 
+    x_prepay1_times, x_prepay1_amount, max_x_prepay1_amount, x_prepay0_times, x_prepay0_amount, 
+    max_x_prepay0_amount, x_prepay_sum_days, max_x_prepay_days, x_overdue_sum_days, max_x_overdue_days, 
+    x_overdue_times, x_overdue_total_amount, max_x_overdue_total_amount, x_overdue_amount, 
+    max_x_overdue_amount, x_observation30_times, x_overdue30_times, x_overdue30_total_amount, 
+    max_x_overdue30_total_amount, x_overdue30_amount, max_x_overdue30_amount, x_observation60_times, 
+    x_overdue60_times, x_overdue60_total_amount, max_x_overdue60_total_amount, x_overdue60_amount, 
+    max_x_overdue60_amount, x_observation90_times, x_overdue90_times, x_overdue90_total_amount, 
+    max_x_overdue90_total_amount, x_overdue90_amount, max_x_overdue90_amount, debt_overdue_days_max, 
+    x_debt, x_debt_overdue, cdate, edate, creator, editor, status
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tbVar_borrow_repay
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from tbVar_borrow_repay
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="me.mybatis.domain.VarBorrowRepay">
+    insert into tbVar_borrow_repay (id, customer_id, loan_times, 
+      time_bet_firstloan_and_audit, total_amount, fist_loan_strLoanDate, 
+      first_loan_amount, first_loan_is_overdue, first_loan_over_due_days, 
+      first_loan_over_due_amount, first_loan_is_prepay, 
+      first_loan_prepay_days, first_loan_prepay_amount, 
+      last_loan_strLoanDate, last_loan_amount, last_loan_is_overdue, 
+      last_loan_over_due_days, last_loan_over_due_amount, 
+      last_loan_is_prepay, last_loan_prepay_days, last_loan_prepay_amount, 
+      loan_times_in_x, total_amount_in_x, max_loanamount_in_x, 
+      x_prepay30_times, x_prepay30_amount, max_x_prepay30_amount, 
+      x_prepay1_times, x_prepay1_amount, max_x_prepay1_amount, 
+      x_prepay0_times, x_prepay0_amount, max_x_prepay0_amount, 
+      x_prepay_sum_days, max_x_prepay_days, x_overdue_sum_days, 
+      max_x_overdue_days, x_overdue_times, x_overdue_total_amount, 
+      max_x_overdue_total_amount, x_overdue_amount, max_x_overdue_amount, 
+      x_observation30_times, x_overdue30_times, x_overdue30_total_amount, 
+      max_x_overdue30_total_amount, x_overdue30_amount, 
+      max_x_overdue30_amount, x_observation60_times, 
+      x_overdue60_times, x_overdue60_total_amount, 
+      max_x_overdue60_total_amount, x_overdue60_amount, 
+      max_x_overdue60_amount, x_observation90_times, 
+      x_overdue90_times, x_overdue90_total_amount, 
+      max_x_overdue90_total_amount, x_overdue90_amount, 
+      max_x_overdue90_amount, debt_overdue_days_max, 
+      x_debt, x_debt_overdue, cdate, 
+      edate, creator, editor, 
+      status)
+    values (#{id,jdbcType=BIGINT}, #{customerId,jdbcType=BIGINT}, #{loanTimes,jdbcType=INTEGER}, 
+      #{timeBetFirstloanAndAudit,jdbcType=INTEGER}, #{totalAmount,jdbcType=BIGINT}, #{fistLoanStrloandate,jdbcType=VARCHAR}, 
+      #{firstLoanAmount,jdbcType=BIGINT}, #{firstLoanIsOverdue,jdbcType=TINYINT}, #{firstLoanOverDueDays,jdbcType=INTEGER}, 
+      #{firstLoanOverDueAmount,jdbcType=BIGINT}, #{firstLoanIsPrepay,jdbcType=TINYINT}, 
+      #{firstLoanPrepayDays,jdbcType=INTEGER}, #{firstLoanPrepayAmount,jdbcType=BIGINT}, 
+      #{lastLoanStrloandate,jdbcType=VARCHAR}, #{lastLoanAmount,jdbcType=BIGINT}, #{lastLoanIsOverdue,jdbcType=TINYINT}, 
+      #{lastLoanOverDueDays,jdbcType=TINYINT}, #{lastLoanOverDueAmount,jdbcType=BIGINT}, 
+      #{lastLoanIsPrepay,jdbcType=TINYINT}, #{lastLoanPrepayDays,jdbcType=INTEGER}, #{lastLoanPrepayAmount,jdbcType=BIGINT}, 
+      #{loanTimesInX,jdbcType=INTEGER}, #{totalAmountInX,jdbcType=BIGINT}, #{maxLoanamountInX,jdbcType=BIGINT}, 
+      #{xPrepay30Times,jdbcType=INTEGER}, #{xPrepay30Amount,jdbcType=BIGINT}, #{maxXPrepay30Amount,jdbcType=BIGINT}, 
+      #{xPrepay1Times,jdbcType=INTEGER}, #{xPrepay1Amount,jdbcType=BIGINT}, #{maxXPrepay1Amount,jdbcType=BIGINT}, 
+      #{xPrepay0Times,jdbcType=INTEGER}, #{xPrepay0Amount,jdbcType=BIGINT}, #{maxXPrepay0Amount,jdbcType=BIGINT}, 
+      #{xPrepaySumDays,jdbcType=INTEGER}, #{maxXPrepayDays,jdbcType=INTEGER}, #{xOverdueSumDays,jdbcType=INTEGER}, 
+      #{maxXOverdueDays,jdbcType=INTEGER}, #{xOverdueTimes,jdbcType=INTEGER}, #{xOverdueTotalAmount,jdbcType=BIGINT}, 
+      #{maxXOverdueTotalAmount,jdbcType=BIGINT}, #{xOverdueAmount,jdbcType=BIGINT}, #{maxXOverdueAmount,jdbcType=BIGINT}, 
+      #{xObservation30Times,jdbcType=INTEGER}, #{xOverdue30Times,jdbcType=INTEGER}, #{xOverdue30TotalAmount,jdbcType=BIGINT}, 
+      #{maxXOverdue30TotalAmount,jdbcType=BIGINT}, #{xOverdue30Amount,jdbcType=BIGINT}, 
+      #{maxXOverdue30Amount,jdbcType=BIGINT}, #{xObservation60Times,jdbcType=INTEGER}, 
+      #{xOverdue60Times,jdbcType=INTEGER}, #{xOverdue60TotalAmount,jdbcType=BIGINT}, 
+      #{maxXOverdue60TotalAmount,jdbcType=BIGINT}, #{xOverdue60Amount,jdbcType=BIGINT}, 
+      #{maxXOverdue60Amount,jdbcType=BIGINT}, #{xObservation90Times,jdbcType=INTEGER}, 
+      #{xOverdue90Times,jdbcType=INTEGER}, #{xOverdue90TotalAmount,jdbcType=BIGINT}, 
+      #{maxXOverdue90TotalAmount,jdbcType=BIGINT}, #{xOverdue90Amount,jdbcType=BIGINT}, 
+      #{maxXOverdue90Amount,jdbcType=BIGINT}, #{debtOverdueDaysMax,jdbcType=INTEGER}, 
+      #{xDebt,jdbcType=BIGINT}, #{xDebtOverdue,jdbcType=BIGINT}, #{cdate,jdbcType=TIMESTAMP}, 
+      #{edate,jdbcType=TIMESTAMP}, #{creator,jdbcType=VARCHAR}, #{editor,jdbcType=VARCHAR}, 
+      #{status,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="me.mybatis.domain.VarBorrowRepay">
+    insert into tbVar_borrow_repay
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="customerId != null">
+        customer_id,
+      </if>
+      <if test="loanTimes != null">
+        loan_times,
+      </if>
+      <if test="timeBetFirstloanAndAudit != null">
+        time_bet_firstloan_and_audit,
+      </if>
+      <if test="totalAmount != null">
+        total_amount,
+      </if>
+      <if test="fistLoanStrloandate != null">
+        fist_loan_strLoanDate,
+      </if>
+      <if test="firstLoanAmount != null">
+        first_loan_amount,
+      </if>
+      <if test="firstLoanIsOverdue != null">
+        first_loan_is_overdue,
+      </if>
+      <if test="firstLoanOverDueDays != null">
+        first_loan_over_due_days,
+      </if>
+      <if test="firstLoanOverDueAmount != null">
+        first_loan_over_due_amount,
+      </if>
+      <if test="firstLoanIsPrepay != null">
+        first_loan_is_prepay,
+      </if>
+      <if test="firstLoanPrepayDays != null">
+        first_loan_prepay_days,
+      </if>
+      <if test="firstLoanPrepayAmount != null">
+        first_loan_prepay_amount,
+      </if>
+      <if test="lastLoanStrloandate != null">
+        last_loan_strLoanDate,
+      </if>
+      <if test="lastLoanAmount != null">
+        last_loan_amount,
+      </if>
+      <if test="lastLoanIsOverdue != null">
+        last_loan_is_overdue,
+      </if>
+      <if test="lastLoanOverDueDays != null">
+        last_loan_over_due_days,
+      </if>
+      <if test="lastLoanOverDueAmount != null">
+        last_loan_over_due_amount,
+      </if>
+      <if test="lastLoanIsPrepay != null">
+        last_loan_is_prepay,
+      </if>
+      <if test="lastLoanPrepayDays != null">
+        last_loan_prepay_days,
+      </if>
+      <if test="lastLoanPrepayAmount != null">
+        last_loan_prepay_amount,
+      </if>
+      <if test="loanTimesInX != null">
+        loan_times_in_x,
+      </if>
+      <if test="totalAmountInX != null">
+        total_amount_in_x,
+      </if>
+      <if test="maxLoanamountInX != null">
+        max_loanamount_in_x,
+      </if>
+      <if test="xPrepay30Times != null">
+        x_prepay30_times,
+      </if>
+      <if test="xPrepay30Amount != null">
+        x_prepay30_amount,
+      </if>
+      <if test="maxXPrepay30Amount != null">
+        max_x_prepay30_amount,
+      </if>
+      <if test="xPrepay1Times != null">
+        x_prepay1_times,
+      </if>
+      <if test="xPrepay1Amount != null">
+        x_prepay1_amount,
+      </if>
+      <if test="maxXPrepay1Amount != null">
+        max_x_prepay1_amount,
+      </if>
+      <if test="xPrepay0Times != null">
+        x_prepay0_times,
+      </if>
+      <if test="xPrepay0Amount != null">
+        x_prepay0_amount,
+      </if>
+      <if test="maxXPrepay0Amount != null">
+        max_x_prepay0_amount,
+      </if>
+      <if test="xPrepaySumDays != null">
+        x_prepay_sum_days,
+      </if>
+      <if test="maxXPrepayDays != null">
+        max_x_prepay_days,
+      </if>
+      <if test="xOverdueSumDays != null">
+        x_overdue_sum_days,
+      </if>
+      <if test="maxXOverdueDays != null">
+        max_x_overdue_days,
+      </if>
+      <if test="xOverdueTimes != null">
+        x_overdue_times,
+      </if>
+      <if test="xOverdueTotalAmount != null">
+        x_overdue_total_amount,
+      </if>
+      <if test="maxXOverdueTotalAmount != null">
+        max_x_overdue_total_amount,
+      </if>
+      <if test="xOverdueAmount != null">
+        x_overdue_amount,
+      </if>
+      <if test="maxXOverdueAmount != null">
+        max_x_overdue_amount,
+      </if>
+      <if test="xObservation30Times != null">
+        x_observation30_times,
+      </if>
+      <if test="xOverdue30Times != null">
+        x_overdue30_times,
+      </if>
+      <if test="xOverdue30TotalAmount != null">
+        x_overdue30_total_amount,
+      </if>
+      <if test="maxXOverdue30TotalAmount != null">
+        max_x_overdue30_total_amount,
+      </if>
+      <if test="xOverdue30Amount != null">
+        x_overdue30_amount,
+      </if>
+      <if test="maxXOverdue30Amount != null">
+        max_x_overdue30_amount,
+      </if>
+      <if test="xObservation60Times != null">
+        x_observation60_times,
+      </if>
+      <if test="xOverdue60Times != null">
+        x_overdue60_times,
+      </if>
+      <if test="xOverdue60TotalAmount != null">
+        x_overdue60_total_amount,
+      </if>
+      <if test="maxXOverdue60TotalAmount != null">
+        max_x_overdue60_total_amount,
+      </if>
+      <if test="xOverdue60Amount != null">
+        x_overdue60_amount,
+      </if>
+      <if test="maxXOverdue60Amount != null">
+        max_x_overdue60_amount,
+      </if>
+      <if test="xObservation90Times != null">
+        x_observation90_times,
+      </if>
+      <if test="xOverdue90Times != null">
+        x_overdue90_times,
+      </if>
+      <if test="xOverdue90TotalAmount != null">
+        x_overdue90_total_amount,
+      </if>
+      <if test="maxXOverdue90TotalAmount != null">
+        max_x_overdue90_total_amount,
+      </if>
+      <if test="xOverdue90Amount != null">
+        x_overdue90_amount,
+      </if>
+      <if test="maxXOverdue90Amount != null">
+        max_x_overdue90_amount,
+      </if>
+      <if test="debtOverdueDaysMax != null">
+        debt_overdue_days_max,
+      </if>
+      <if test="xDebt != null">
+        x_debt,
+      </if>
+      <if test="xDebtOverdue != null">
+        x_debt_overdue,
+      </if>
+      <if test="cdate != null">
+        cdate,
+      </if>
+      <if test="edate != null">
+        edate,
+      </if>
+      <if test="creator != null">
+        creator,
+      </if>
+      <if test="editor != null">
+        editor,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="customerId != null">
+        #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="loanTimes != null">
+        #{loanTimes,jdbcType=INTEGER},
+      </if>
+      <if test="timeBetFirstloanAndAudit != null">
+        #{timeBetFirstloanAndAudit,jdbcType=INTEGER},
+      </if>
+      <if test="totalAmount != null">
+        #{totalAmount,jdbcType=BIGINT},
+      </if>
+      <if test="fistLoanStrloandate != null">
+        #{fistLoanStrloandate,jdbcType=VARCHAR},
+      </if>
+      <if test="firstLoanAmount != null">
+        #{firstLoanAmount,jdbcType=BIGINT},
+      </if>
+      <if test="firstLoanIsOverdue != null">
+        #{firstLoanIsOverdue,jdbcType=TINYINT},
+      </if>
+      <if test="firstLoanOverDueDays != null">
+        #{firstLoanOverDueDays,jdbcType=INTEGER},
+      </if>
+      <if test="firstLoanOverDueAmount != null">
+        #{firstLoanOverDueAmount,jdbcType=BIGINT},
+      </if>
+      <if test="firstLoanIsPrepay != null">
+        #{firstLoanIsPrepay,jdbcType=TINYINT},
+      </if>
+      <if test="firstLoanPrepayDays != null">
+        #{firstLoanPrepayDays,jdbcType=INTEGER},
+      </if>
+      <if test="firstLoanPrepayAmount != null">
+        #{firstLoanPrepayAmount,jdbcType=BIGINT},
+      </if>
+      <if test="lastLoanStrloandate != null">
+        #{lastLoanStrloandate,jdbcType=VARCHAR},
+      </if>
+      <if test="lastLoanAmount != null">
+        #{lastLoanAmount,jdbcType=BIGINT},
+      </if>
+      <if test="lastLoanIsOverdue != null">
+        #{lastLoanIsOverdue,jdbcType=TINYINT},
+      </if>
+      <if test="lastLoanOverDueDays != null">
+        #{lastLoanOverDueDays,jdbcType=TINYINT},
+      </if>
+      <if test="lastLoanOverDueAmount != null">
+        #{lastLoanOverDueAmount,jdbcType=BIGINT},
+      </if>
+      <if test="lastLoanIsPrepay != null">
+        #{lastLoanIsPrepay,jdbcType=TINYINT},
+      </if>
+      <if test="lastLoanPrepayDays != null">
+        #{lastLoanPrepayDays,jdbcType=INTEGER},
+      </if>
+      <if test="lastLoanPrepayAmount != null">
+        #{lastLoanPrepayAmount,jdbcType=BIGINT},
+      </if>
+      <if test="loanTimesInX != null">
+        #{loanTimesInX,jdbcType=INTEGER},
+      </if>
+      <if test="totalAmountInX != null">
+        #{totalAmountInX,jdbcType=BIGINT},
+      </if>
+      <if test="maxLoanamountInX != null">
+        #{maxLoanamountInX,jdbcType=BIGINT},
+      </if>
+      <if test="xPrepay30Times != null">
+        #{xPrepay30Times,jdbcType=INTEGER},
+      </if>
+      <if test="xPrepay30Amount != null">
+        #{xPrepay30Amount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXPrepay30Amount != null">
+        #{maxXPrepay30Amount,jdbcType=BIGINT},
+      </if>
+      <if test="xPrepay1Times != null">
+        #{xPrepay1Times,jdbcType=INTEGER},
+      </if>
+      <if test="xPrepay1Amount != null">
+        #{xPrepay1Amount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXPrepay1Amount != null">
+        #{maxXPrepay1Amount,jdbcType=BIGINT},
+      </if>
+      <if test="xPrepay0Times != null">
+        #{xPrepay0Times,jdbcType=INTEGER},
+      </if>
+      <if test="xPrepay0Amount != null">
+        #{xPrepay0Amount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXPrepay0Amount != null">
+        #{maxXPrepay0Amount,jdbcType=BIGINT},
+      </if>
+      <if test="xPrepaySumDays != null">
+        #{xPrepaySumDays,jdbcType=INTEGER},
+      </if>
+      <if test="maxXPrepayDays != null">
+        #{maxXPrepayDays,jdbcType=INTEGER},
+      </if>
+      <if test="xOverdueSumDays != null">
+        #{xOverdueSumDays,jdbcType=INTEGER},
+      </if>
+      <if test="maxXOverdueDays != null">
+        #{maxXOverdueDays,jdbcType=INTEGER},
+      </if>
+      <if test="xOverdueTimes != null">
+        #{xOverdueTimes,jdbcType=INTEGER},
+      </if>
+      <if test="xOverdueTotalAmount != null">
+        #{xOverdueTotalAmount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXOverdueTotalAmount != null">
+        #{maxXOverdueTotalAmount,jdbcType=BIGINT},
+      </if>
+      <if test="xOverdueAmount != null">
+        #{xOverdueAmount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXOverdueAmount != null">
+        #{maxXOverdueAmount,jdbcType=BIGINT},
+      </if>
+      <if test="xObservation30Times != null">
+        #{xObservation30Times,jdbcType=INTEGER},
+      </if>
+      <if test="xOverdue30Times != null">
+        #{xOverdue30Times,jdbcType=INTEGER},
+      </if>
+      <if test="xOverdue30TotalAmount != null">
+        #{xOverdue30TotalAmount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXOverdue30TotalAmount != null">
+        #{maxXOverdue30TotalAmount,jdbcType=BIGINT},
+      </if>
+      <if test="xOverdue30Amount != null">
+        #{xOverdue30Amount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXOverdue30Amount != null">
+        #{maxXOverdue30Amount,jdbcType=BIGINT},
+      </if>
+      <if test="xObservation60Times != null">
+        #{xObservation60Times,jdbcType=INTEGER},
+      </if>
+      <if test="xOverdue60Times != null">
+        #{xOverdue60Times,jdbcType=INTEGER},
+      </if>
+      <if test="xOverdue60TotalAmount != null">
+        #{xOverdue60TotalAmount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXOverdue60TotalAmount != null">
+        #{maxXOverdue60TotalAmount,jdbcType=BIGINT},
+      </if>
+      <if test="xOverdue60Amount != null">
+        #{xOverdue60Amount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXOverdue60Amount != null">
+        #{maxXOverdue60Amount,jdbcType=BIGINT},
+      </if>
+      <if test="xObservation90Times != null">
+        #{xObservation90Times,jdbcType=INTEGER},
+      </if>
+      <if test="xOverdue90Times != null">
+        #{xOverdue90Times,jdbcType=INTEGER},
+      </if>
+      <if test="xOverdue90TotalAmount != null">
+        #{xOverdue90TotalAmount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXOverdue90TotalAmount != null">
+        #{maxXOverdue90TotalAmount,jdbcType=BIGINT},
+      </if>
+      <if test="xOverdue90Amount != null">
+        #{xOverdue90Amount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXOverdue90Amount != null">
+        #{maxXOverdue90Amount,jdbcType=BIGINT},
+      </if>
+      <if test="debtOverdueDaysMax != null">
+        #{debtOverdueDaysMax,jdbcType=INTEGER},
+      </if>
+      <if test="xDebt != null">
+        #{xDebt,jdbcType=BIGINT},
+      </if>
+      <if test="xDebtOverdue != null">
+        #{xDebtOverdue,jdbcType=BIGINT},
+      </if>
+      <if test="cdate != null">
+        #{cdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="edate != null">
+        #{edate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="creator != null">
+        #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="editor != null">
+        #{editor,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="me.mybatis.domain.VarBorrowRepay">
+    update tbVar_borrow_repay
+    <set>
+      <if test="customerId != null">
+        customer_id = #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="loanTimes != null">
+        loan_times = #{loanTimes,jdbcType=INTEGER},
+      </if>
+      <if test="timeBetFirstloanAndAudit != null">
+        time_bet_firstloan_and_audit = #{timeBetFirstloanAndAudit,jdbcType=INTEGER},
+      </if>
+      <if test="totalAmount != null">
+        total_amount = #{totalAmount,jdbcType=BIGINT},
+      </if>
+      <if test="fistLoanStrloandate != null">
+        fist_loan_strLoanDate = #{fistLoanStrloandate,jdbcType=VARCHAR},
+      </if>
+      <if test="firstLoanAmount != null">
+        first_loan_amount = #{firstLoanAmount,jdbcType=BIGINT},
+      </if>
+      <if test="firstLoanIsOverdue != null">
+        first_loan_is_overdue = #{firstLoanIsOverdue,jdbcType=TINYINT},
+      </if>
+      <if test="firstLoanOverDueDays != null">
+        first_loan_over_due_days = #{firstLoanOverDueDays,jdbcType=INTEGER},
+      </if>
+      <if test="firstLoanOverDueAmount != null">
+        first_loan_over_due_amount = #{firstLoanOverDueAmount,jdbcType=BIGINT},
+      </if>
+      <if test="firstLoanIsPrepay != null">
+        first_loan_is_prepay = #{firstLoanIsPrepay,jdbcType=TINYINT},
+      </if>
+      <if test="firstLoanPrepayDays != null">
+        first_loan_prepay_days = #{firstLoanPrepayDays,jdbcType=INTEGER},
+      </if>
+      <if test="firstLoanPrepayAmount != null">
+        first_loan_prepay_amount = #{firstLoanPrepayAmount,jdbcType=BIGINT},
+      </if>
+      <if test="lastLoanStrloandate != null">
+        last_loan_strLoanDate = #{lastLoanStrloandate,jdbcType=VARCHAR},
+      </if>
+      <if test="lastLoanAmount != null">
+        last_loan_amount = #{lastLoanAmount,jdbcType=BIGINT},
+      </if>
+      <if test="lastLoanIsOverdue != null">
+        last_loan_is_overdue = #{lastLoanIsOverdue,jdbcType=TINYINT},
+      </if>
+      <if test="lastLoanOverDueDays != null">
+        last_loan_over_due_days = #{lastLoanOverDueDays,jdbcType=TINYINT},
+      </if>
+      <if test="lastLoanOverDueAmount != null">
+        last_loan_over_due_amount = #{lastLoanOverDueAmount,jdbcType=BIGINT},
+      </if>
+      <if test="lastLoanIsPrepay != null">
+        last_loan_is_prepay = #{lastLoanIsPrepay,jdbcType=TINYINT},
+      </if>
+      <if test="lastLoanPrepayDays != null">
+        last_loan_prepay_days = #{lastLoanPrepayDays,jdbcType=INTEGER},
+      </if>
+      <if test="lastLoanPrepayAmount != null">
+        last_loan_prepay_amount = #{lastLoanPrepayAmount,jdbcType=BIGINT},
+      </if>
+      <if test="loanTimesInX != null">
+        loan_times_in_x = #{loanTimesInX,jdbcType=INTEGER},
+      </if>
+      <if test="totalAmountInX != null">
+        total_amount_in_x = #{totalAmountInX,jdbcType=BIGINT},
+      </if>
+      <if test="maxLoanamountInX != null">
+        max_loanamount_in_x = #{maxLoanamountInX,jdbcType=BIGINT},
+      </if>
+      <if test="xPrepay30Times != null">
+        x_prepay30_times = #{xPrepay30Times,jdbcType=INTEGER},
+      </if>
+      <if test="xPrepay30Amount != null">
+        x_prepay30_amount = #{xPrepay30Amount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXPrepay30Amount != null">
+        max_x_prepay30_amount = #{maxXPrepay30Amount,jdbcType=BIGINT},
+      </if>
+      <if test="xPrepay1Times != null">
+        x_prepay1_times = #{xPrepay1Times,jdbcType=INTEGER},
+      </if>
+      <if test="xPrepay1Amount != null">
+        x_prepay1_amount = #{xPrepay1Amount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXPrepay1Amount != null">
+        max_x_prepay1_amount = #{maxXPrepay1Amount,jdbcType=BIGINT},
+      </if>
+      <if test="xPrepay0Times != null">
+        x_prepay0_times = #{xPrepay0Times,jdbcType=INTEGER},
+      </if>
+      <if test="xPrepay0Amount != null">
+        x_prepay0_amount = #{xPrepay0Amount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXPrepay0Amount != null">
+        max_x_prepay0_amount = #{maxXPrepay0Amount,jdbcType=BIGINT},
+      </if>
+      <if test="xPrepaySumDays != null">
+        x_prepay_sum_days = #{xPrepaySumDays,jdbcType=INTEGER},
+      </if>
+      <if test="maxXPrepayDays != null">
+        max_x_prepay_days = #{maxXPrepayDays,jdbcType=INTEGER},
+      </if>
+      <if test="xOverdueSumDays != null">
+        x_overdue_sum_days = #{xOverdueSumDays,jdbcType=INTEGER},
+      </if>
+      <if test="maxXOverdueDays != null">
+        max_x_overdue_days = #{maxXOverdueDays,jdbcType=INTEGER},
+      </if>
+      <if test="xOverdueTimes != null">
+        x_overdue_times = #{xOverdueTimes,jdbcType=INTEGER},
+      </if>
+      <if test="xOverdueTotalAmount != null">
+        x_overdue_total_amount = #{xOverdueTotalAmount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXOverdueTotalAmount != null">
+        max_x_overdue_total_amount = #{maxXOverdueTotalAmount,jdbcType=BIGINT},
+      </if>
+      <if test="xOverdueAmount != null">
+        x_overdue_amount = #{xOverdueAmount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXOverdueAmount != null">
+        max_x_overdue_amount = #{maxXOverdueAmount,jdbcType=BIGINT},
+      </if>
+      <if test="xObservation30Times != null">
+        x_observation30_times = #{xObservation30Times,jdbcType=INTEGER},
+      </if>
+      <if test="xOverdue30Times != null">
+        x_overdue30_times = #{xOverdue30Times,jdbcType=INTEGER},
+      </if>
+      <if test="xOverdue30TotalAmount != null">
+        x_overdue30_total_amount = #{xOverdue30TotalAmount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXOverdue30TotalAmount != null">
+        max_x_overdue30_total_amount = #{maxXOverdue30TotalAmount,jdbcType=BIGINT},
+      </if>
+      <if test="xOverdue30Amount != null">
+        x_overdue30_amount = #{xOverdue30Amount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXOverdue30Amount != null">
+        max_x_overdue30_amount = #{maxXOverdue30Amount,jdbcType=BIGINT},
+      </if>
+      <if test="xObservation60Times != null">
+        x_observation60_times = #{xObservation60Times,jdbcType=INTEGER},
+      </if>
+      <if test="xOverdue60Times != null">
+        x_overdue60_times = #{xOverdue60Times,jdbcType=INTEGER},
+      </if>
+      <if test="xOverdue60TotalAmount != null">
+        x_overdue60_total_amount = #{xOverdue60TotalAmount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXOverdue60TotalAmount != null">
+        max_x_overdue60_total_amount = #{maxXOverdue60TotalAmount,jdbcType=BIGINT},
+      </if>
+      <if test="xOverdue60Amount != null">
+        x_overdue60_amount = #{xOverdue60Amount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXOverdue60Amount != null">
+        max_x_overdue60_amount = #{maxXOverdue60Amount,jdbcType=BIGINT},
+      </if>
+      <if test="xObservation90Times != null">
+        x_observation90_times = #{xObservation90Times,jdbcType=INTEGER},
+      </if>
+      <if test="xOverdue90Times != null">
+        x_overdue90_times = #{xOverdue90Times,jdbcType=INTEGER},
+      </if>
+      <if test="xOverdue90TotalAmount != null">
+        x_overdue90_total_amount = #{xOverdue90TotalAmount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXOverdue90TotalAmount != null">
+        max_x_overdue90_total_amount = #{maxXOverdue90TotalAmount,jdbcType=BIGINT},
+      </if>
+      <if test="xOverdue90Amount != null">
+        x_overdue90_amount = #{xOverdue90Amount,jdbcType=BIGINT},
+      </if>
+      <if test="maxXOverdue90Amount != null">
+        max_x_overdue90_amount = #{maxXOverdue90Amount,jdbcType=BIGINT},
+      </if>
+      <if test="debtOverdueDaysMax != null">
+        debt_overdue_days_max = #{debtOverdueDaysMax,jdbcType=INTEGER},
+      </if>
+      <if test="xDebt != null">
+        x_debt = #{xDebt,jdbcType=BIGINT},
+      </if>
+      <if test="xDebtOverdue != null">
+        x_debt_overdue = #{xDebtOverdue,jdbcType=BIGINT},
+      </if>
+      <if test="cdate != null">
+        cdate = #{cdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="edate != null">
+        edate = #{edate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="creator != null">
+        creator = #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="editor != null">
+        editor = #{editor,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=CHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="me.mybatis.domain.VarBorrowRepay">
+    update tbVar_borrow_repay
+    set customer_id = #{customerId,jdbcType=BIGINT},
+      loan_times = #{loanTimes,jdbcType=INTEGER},
+      time_bet_firstloan_and_audit = #{timeBetFirstloanAndAudit,jdbcType=INTEGER},
+      total_amount = #{totalAmount,jdbcType=BIGINT},
+      fist_loan_strLoanDate = #{fistLoanStrloandate,jdbcType=VARCHAR},
+      first_loan_amount = #{firstLoanAmount,jdbcType=BIGINT},
+      first_loan_is_overdue = #{firstLoanIsOverdue,jdbcType=TINYINT},
+      first_loan_over_due_days = #{firstLoanOverDueDays,jdbcType=INTEGER},
+      first_loan_over_due_amount = #{firstLoanOverDueAmount,jdbcType=BIGINT},
+      first_loan_is_prepay = #{firstLoanIsPrepay,jdbcType=TINYINT},
+      first_loan_prepay_days = #{firstLoanPrepayDays,jdbcType=INTEGER},
+      first_loan_prepay_amount = #{firstLoanPrepayAmount,jdbcType=BIGINT},
+      last_loan_strLoanDate = #{lastLoanStrloandate,jdbcType=VARCHAR},
+      last_loan_amount = #{lastLoanAmount,jdbcType=BIGINT},
+      last_loan_is_overdue = #{lastLoanIsOverdue,jdbcType=TINYINT},
+      last_loan_over_due_days = #{lastLoanOverDueDays,jdbcType=TINYINT},
+      last_loan_over_due_amount = #{lastLoanOverDueAmount,jdbcType=BIGINT},
+      last_loan_is_prepay = #{lastLoanIsPrepay,jdbcType=TINYINT},
+      last_loan_prepay_days = #{lastLoanPrepayDays,jdbcType=INTEGER},
+      last_loan_prepay_amount = #{lastLoanPrepayAmount,jdbcType=BIGINT},
+      loan_times_in_x = #{loanTimesInX,jdbcType=INTEGER},
+      total_amount_in_x = #{totalAmountInX,jdbcType=BIGINT},
+      max_loanamount_in_x = #{maxLoanamountInX,jdbcType=BIGINT},
+      x_prepay30_times = #{xPrepay30Times,jdbcType=INTEGER},
+      x_prepay30_amount = #{xPrepay30Amount,jdbcType=BIGINT},
+      max_x_prepay30_amount = #{maxXPrepay30Amount,jdbcType=BIGINT},
+      x_prepay1_times = #{xPrepay1Times,jdbcType=INTEGER},
+      x_prepay1_amount = #{xPrepay1Amount,jdbcType=BIGINT},
+      max_x_prepay1_amount = #{maxXPrepay1Amount,jdbcType=BIGINT},
+      x_prepay0_times = #{xPrepay0Times,jdbcType=INTEGER},
+      x_prepay0_amount = #{xPrepay0Amount,jdbcType=BIGINT},
+      max_x_prepay0_amount = #{maxXPrepay0Amount,jdbcType=BIGINT},
+      x_prepay_sum_days = #{xPrepaySumDays,jdbcType=INTEGER},
+      max_x_prepay_days = #{maxXPrepayDays,jdbcType=INTEGER},
+      x_overdue_sum_days = #{xOverdueSumDays,jdbcType=INTEGER},
+      max_x_overdue_days = #{maxXOverdueDays,jdbcType=INTEGER},
+      x_overdue_times = #{xOverdueTimes,jdbcType=INTEGER},
+      x_overdue_total_amount = #{xOverdueTotalAmount,jdbcType=BIGINT},
+      max_x_overdue_total_amount = #{maxXOverdueTotalAmount,jdbcType=BIGINT},
+      x_overdue_amount = #{xOverdueAmount,jdbcType=BIGINT},
+      max_x_overdue_amount = #{maxXOverdueAmount,jdbcType=BIGINT},
+      x_observation30_times = #{xObservation30Times,jdbcType=INTEGER},
+      x_overdue30_times = #{xOverdue30Times,jdbcType=INTEGER},
+      x_overdue30_total_amount = #{xOverdue30TotalAmount,jdbcType=BIGINT},
+      max_x_overdue30_total_amount = #{maxXOverdue30TotalAmount,jdbcType=BIGINT},
+      x_overdue30_amount = #{xOverdue30Amount,jdbcType=BIGINT},
+      max_x_overdue30_amount = #{maxXOverdue30Amount,jdbcType=BIGINT},
+      x_observation60_times = #{xObservation60Times,jdbcType=INTEGER},
+      x_overdue60_times = #{xOverdue60Times,jdbcType=INTEGER},
+      x_overdue60_total_amount = #{xOverdue60TotalAmount,jdbcType=BIGINT},
+      max_x_overdue60_total_amount = #{maxXOverdue60TotalAmount,jdbcType=BIGINT},
+      x_overdue60_amount = #{xOverdue60Amount,jdbcType=BIGINT},
+      max_x_overdue60_amount = #{maxXOverdue60Amount,jdbcType=BIGINT},
+      x_observation90_times = #{xObservation90Times,jdbcType=INTEGER},
+      x_overdue90_times = #{xOverdue90Times,jdbcType=INTEGER},
+      x_overdue90_total_amount = #{xOverdue90TotalAmount,jdbcType=BIGINT},
+      max_x_overdue90_total_amount = #{maxXOverdue90TotalAmount,jdbcType=BIGINT},
+      x_overdue90_amount = #{xOverdue90Amount,jdbcType=BIGINT},
+      max_x_overdue90_amount = #{maxXOverdue90Amount,jdbcType=BIGINT},
+      debt_overdue_days_max = #{debtOverdueDaysMax,jdbcType=INTEGER},
+      x_debt = #{xDebt,jdbcType=BIGINT},
+      x_debt_overdue = #{xDebtOverdue,jdbcType=BIGINT},
+      cdate = #{cdate,jdbcType=TIMESTAMP},
+      edate = #{edate,jdbcType=TIMESTAMP},
+      creator = #{creator,jdbcType=VARCHAR},
+      editor = #{editor,jdbcType=VARCHAR},
+      status = #{status,jdbcType=CHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+    <resultMap id="BaseResultMap" type="me.mybatis.domain.VarBorrowRepay">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="customerId" jdbcType="BIGINT" property="customerid" />
+        <result column="loan_times" jdbcType="INTEGER" property="loanTimes" />
+        <result column="total_amount" jdbcType="BIGINT" property="totalAmount" />
+        <result column="fist_loan_strLoanDate" jdbcType="TIMESTAMP" property="fistLoanStrloandate" />
+        <result column="first_loan_amount" jdbcType="BIGINT" property="firstLoanAmount" />
+        <result column="first_loan_is_overdue" jdbcType="TINYINT" property="firstLoanIsOverdue" />
+        <result column="first_loan_over_due_days" jdbcType="INTEGER" property="firstLoanOverDueDays" />
+        <result column="first_loan_over_due_amount" jdbcType="BIGINT" property="firstLoanOverDueAmount" />
+        <result column="first_loan_is_prepay" jdbcType="TINYINT" property="firstLoanIsPrepay" />
+        <result column="first_loan_prepay_days" jdbcType="INTEGER" property="firstLoanPrepayDays" />
+        <result column="first_loan_prepay_amount" jdbcType="BIGINT" property="firstLoanPrepayAmount" />
+        <result column="last_loan_strLoanDate" jdbcType="TIMESTAMP" property="lastLoanStrloandate" />
+        <result column="last_loan_amount" jdbcType="BIGINT" property="lastLoanAmount" />
+        <result column="last_loan_is_overdue" jdbcType="TINYINT" property="lastLoanIsOverdue" />
+        <result column="last_loan_over_due_days" jdbcType="TINYINT" property="lastLoanOverDueDays" />
+        <result column="last_loan_over_due_amount" jdbcType="BIGINT" property="lastLoanOverDueAmount" />
+        <result column="last_loan_is_prepay" jdbcType="TINYINT" property="lastLoanIsPrepay" />
+        <result column="last_loan_prepay_days" jdbcType="INTEGER" property="lastLoanPrepayDays" />
+        <result column="last_loan_prepay_amount" jdbcType="BIGINT" property="lastLoanPrepayAmount" />
+        <result column="loan_times_in_x" jdbcType="INTEGER" property="loanTimesInX" />
+        <result column="total_amount_in_x" jdbcType="BIGINT" property="totalAmountInX" />
+        <result column="max_loanamount_in_x" jdbcType="BIGINT" property="maxLoanamountInX" />
+        <result column="x_prepay30_times" jdbcType="INTEGER" property="xPrepay30Times" />
+        <result column="x_prepay30_amount" jdbcType="BIGINT" property="xPrepay30Amount" />
+        <result column="max_x_prepay30_amount" jdbcType="BIGINT" property="maxXPrepay30Amount" />
+        <result column="x_prepay1_times" jdbcType="INTEGER" property="xPrepay1Times" />
+        <result column="x_prepay1_amount" jdbcType="BIGINT" property="xPrepay1Amount" />
+        <result column="max_x_prepay1_amount" jdbcType="BIGINT" property="maxXPrepay1Amount" />
+        <result column="x_prepay0_times" jdbcType="INTEGER" property="xPrepay0Times" />
+        <result column="x_prepay0_amount" jdbcType="BIGINT" property="xPrepay0Amount" />
+        <result column="max_x_prepay0_amount" jdbcType="BIGINT" property="maxXPrepay0Amount" />
+        <result column="x_prepay_sum_days" jdbcType="INTEGER" property="xPrepaySumDays" />
+        <result column="max_x_prepay_days" jdbcType="INTEGER" property="maxXPrepayDays" />
+        <result column="x_overdue_sum_days" jdbcType="INTEGER" property="xOverdueSumDays" />
+        <result column="max_x_overdue_days" jdbcType="INTEGER" property="maxXOverdueDays" />
+        <result column="x_overdue_times" jdbcType="INTEGER" property="xOverdueTimes" />
+        <result column="x_overdue_total_amount" jdbcType="BIGINT" property="xOverdueTotalAmount" />
+        <result column="max_x_overdue_total_amount" jdbcType="BIGINT" property="maxXOverdueTotalAmount" />
+        <result column="x_overdue_amount" jdbcType="BIGINT" property="xOverdueAmount" />
+        <result column="max_x_overdue_amount" jdbcType="BIGINT" property="maxXOverdueAmount" />
+        <result column="x_observation30_times" jdbcType="INTEGER" property="xObservation30Times" />
+        <result column="x_overdue30_times" jdbcType="INTEGER" property="xOverdue30Times" />
+        <result column="x_overdue30_total_amount" jdbcType="BIGINT" property="xOverdue30TotalAmount" />
+        <result column="max_x_overdue30_total_amount" jdbcType="BIGINT" property="maxXOverdue30TotalAmount" />
+        <result column="x_overdue30_amount" jdbcType="BIGINT" property="xOverdue30Amount" />
+        <result column="max_x_overdue30_amount" jdbcType="BIGINT" property="maxXOverdue30Amount" />
+        <result column="x_observation60_times" jdbcType="INTEGER" property="xObservation60Times" />
+        <result column="x_overdue60_times" jdbcType="INTEGER" property="xOverdue60Times" />
+        <result column="x_overdue60_total_amount" jdbcType="BIGINT" property="xOverdue60TotalAmount" />
+        <result column="max_x_overdue60_total_amount" jdbcType="BIGINT" property="maxXOverdue60TotalAmount" />
+        <result column="x_overdue60_amount" jdbcType="BIGINT" property="xOverdue60Amount" />
+        <result column="max_x_overdue60_amount" jdbcType="BIGINT" property="maxXOverdue60Amount" />
+        <result column="x_observation90_times" jdbcType="INTEGER" property="xObservation90Times" />
+        <result column="x_overdue90_times" jdbcType="INTEGER" property="xOverdue90Times" />
+        <result column="x_overdue90_total_amount" jdbcType="BIGINT" property="xOverdue90TotalAmount" />
+        <result column="max_x_overdue90_total_amount" jdbcType="BIGINT" property="maxXOverdue90TotalAmount" />
+        <result column="x_overdue90_amount" jdbcType="BIGINT" property="xOverdue90Amount" />
+        <result column="max_x_overdue90_amount" jdbcType="BIGINT" property="maxXOverdue90Amount" />
+        <result column="debt_overdue_days_max" jdbcType="INTEGER" property="debtOverdueDaysMax" />
+        <result column="x_debt" jdbcType="BIGINT" property="xDebt" />
+        <result column="x_debt_overdue" jdbcType="BIGINT" property="xDebtOverdue" />
+        <result column="cdate" jdbcType="TIMESTAMP" property="cdate" />
+        <result column="edate" jdbcType="TIMESTAMP" property="edate" />
+        <result column="creator" jdbcType="VARCHAR" property="creator" />
+        <result column="editor" jdbcType="VARCHAR" property="editor" />
+        <result column="status" jdbcType="CHAR" property="status" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, customerId, loan_times, total_amount, fist_loan_strLoanDate, first_loan_amount,
+        first_loan_is_overdue, first_loan_over_due_days, first_loan_over_due_amount, first_loan_is_prepay,
+        first_loan_prepay_days, first_loan_prepay_amount, last_loan_strLoanDate, last_loan_amount,
+        last_loan_is_overdue, last_loan_over_due_days, last_loan_over_due_amount, last_loan_is_prepay,
+        last_loan_prepay_days, last_loan_prepay_amount, loan_times_in_x, total_amount_in_x,
+        max_loanamount_in_x, x_prepay30_times, x_prepay30_amount, max_x_prepay30_amount,
+        x_prepay1_times, x_prepay1_amount, max_x_prepay1_amount, x_prepay0_times, x_prepay0_amount,
+        max_x_prepay0_amount, x_prepay_sum_days, max_x_prepay_days, x_overdue_sum_days, max_x_overdue_days,
+        x_overdue_times, x_overdue_total_amount, max_x_overdue_total_amount, x_overdue_amount,
+        max_x_overdue_amount, x_observation30_times, x_overdue30_times, x_overdue30_total_amount,
+        max_x_overdue30_total_amount, x_overdue30_amount, max_x_overdue30_amount, x_observation60_times,
+        x_overdue60_times, x_overdue60_total_amount, max_x_overdue60_total_amount, x_overdue60_amount,
+        max_x_overdue60_amount, x_observation90_times, x_overdue90_times, x_overdue90_total_amount,
+        max_x_overdue90_total_amount, x_overdue90_amount, max_x_overdue90_amount, debt_overdue_days_max,
+        x_debt, x_debt_overdue, cdate, edate, creator, editor, status
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from tbVar_borrow_repay
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from tbVar_borrow_repay
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
+    <insert id="insert" parameterType="me.mybatis.domain.VarBorrowRepay">
+        insert into tbVar_borrow_repay (id, customerId, loan_times,
+        total_amount, fist_loan_strLoanDate, first_loan_amount,
+        first_loan_is_overdue, first_loan_over_due_days,
+        first_loan_over_due_amount, first_loan_is_prepay,
+        first_loan_prepay_days, first_loan_prepay_amount,
+        last_loan_strLoanDate, last_loan_amount, last_loan_is_overdue,
+        last_loan_over_due_days, last_loan_over_due_amount,
+        last_loan_is_prepay, last_loan_prepay_days, last_loan_prepay_amount,
+        loan_times_in_x, total_amount_in_x, max_loanamount_in_x,
+        x_prepay30_times, x_prepay30_amount, max_x_prepay30_amount,
+        x_prepay1_times, x_prepay1_amount, max_x_prepay1_amount,
+        x_prepay0_times, x_prepay0_amount, max_x_prepay0_amount,
+        x_prepay_sum_days, max_x_prepay_days, x_overdue_sum_days,
+        max_x_overdue_days, x_overdue_times, x_overdue_total_amount,
+        max_x_overdue_total_amount, x_overdue_amount, max_x_overdue_amount,
+        x_observation30_times, x_overdue30_times, x_overdue30_total_amount,
+        max_x_overdue30_total_amount, x_overdue30_amount,
+        max_x_overdue30_amount, x_observation60_times,
+        x_overdue60_times, x_overdue60_total_amount,
+        max_x_overdue60_total_amount, x_overdue60_amount,
+        max_x_overdue60_amount, x_observation90_times,
+        x_overdue90_times, x_overdue90_total_amount,
+        max_x_overdue90_total_amount, x_overdue90_amount,
+        max_x_overdue90_amount, debt_overdue_days_max,
+        x_debt, x_debt_overdue, cdate,
+        edate, creator, editor,
+        status)
+        values (#{id,jdbcType=BIGINT}, #{customerid,jdbcType=BIGINT}, #{loanTimes,jdbcType=INTEGER},
+        #{totalAmount,jdbcType=BIGINT}, #{fistLoanStrloandate,jdbcType=TIMESTAMP}, #{firstLoanAmount,jdbcType=BIGINT},
+        #{firstLoanIsOverdue,jdbcType=TINYINT}, #{firstLoanOverDueDays,jdbcType=INTEGER},
+        #{firstLoanOverDueAmount,jdbcType=BIGINT}, #{firstLoanIsPrepay,jdbcType=TINYINT},
+        #{firstLoanPrepayDays,jdbcType=INTEGER}, #{firstLoanPrepayAmount,jdbcType=BIGINT},
+        #{lastLoanStrloandate,jdbcType=TIMESTAMP}, #{lastLoanAmount,jdbcType=BIGINT},
+        #{lastLoanIsOverdue,jdbcType=TINYINT},
+        #{lastLoanOverDueDays,jdbcType=TINYINT}, #{lastLoanOverDueAmount,jdbcType=BIGINT},
+        #{lastLoanIsPrepay,jdbcType=TINYINT}, #{lastLoanPrepayDays,jdbcType=INTEGER},
+        #{lastLoanPrepayAmount,jdbcType=BIGINT},
+        #{loanTimesInX,jdbcType=INTEGER}, #{totalAmountInX,jdbcType=BIGINT}, #{maxLoanamountInX,jdbcType=BIGINT},
+        #{xPrepay30Times,jdbcType=INTEGER}, #{xPrepay30Amount,jdbcType=BIGINT}, #{maxXPrepay30Amount,jdbcType=BIGINT},
+        #{xPrepay1Times,jdbcType=INTEGER}, #{xPrepay1Amount,jdbcType=BIGINT}, #{maxXPrepay1Amount,jdbcType=BIGINT},
+        #{xPrepay0Times,jdbcType=INTEGER}, #{xPrepay0Amount,jdbcType=BIGINT}, #{maxXPrepay0Amount,jdbcType=BIGINT},
+        #{xPrepaySumDays,jdbcType=INTEGER}, #{maxXPrepayDays,jdbcType=INTEGER}, #{xOverdueSumDays,jdbcType=INTEGER},
+        #{maxXOverdueDays,jdbcType=INTEGER}, #{xOverdueTimes,jdbcType=INTEGER}, #{xOverdueTotalAmount,jdbcType=BIGINT},
+        #{maxXOverdueTotalAmount,jdbcType=BIGINT}, #{xOverdueAmount,jdbcType=BIGINT},
+        #{maxXOverdueAmount,jdbcType=BIGINT},
+        #{xObservation30Times,jdbcType=INTEGER}, #{xOverdue30Times,jdbcType=INTEGER},
+        #{xOverdue30TotalAmount,jdbcType=BIGINT},
+        #{maxXOverdue30TotalAmount,jdbcType=BIGINT}, #{xOverdue30Amount,jdbcType=BIGINT},
+        #{maxXOverdue30Amount,jdbcType=BIGINT}, #{xObservation60Times,jdbcType=INTEGER},
+        #{xOverdue60Times,jdbcType=INTEGER}, #{xOverdue60TotalAmount,jdbcType=BIGINT},
+        #{maxXOverdue60TotalAmount,jdbcType=BIGINT}, #{xOverdue60Amount,jdbcType=BIGINT},
+        #{maxXOverdue60Amount,jdbcType=BIGINT}, #{xObservation90Times,jdbcType=INTEGER},
+        #{xOverdue90Times,jdbcType=INTEGER}, #{xOverdue90TotalAmount,jdbcType=BIGINT},
+        #{maxXOverdue90TotalAmount,jdbcType=BIGINT}, #{xOverdue90Amount,jdbcType=BIGINT},
+        #{maxXOverdue90Amount,jdbcType=BIGINT}, #{debtOverdueDaysMax,jdbcType=INTEGER},
+        #{xDebt,jdbcType=BIGINT}, #{xDebtOverdue,jdbcType=BIGINT}, #{cdate,jdbcType=TIMESTAMP},
+        #{edate,jdbcType=TIMESTAMP}, #{creator,jdbcType=VARCHAR}, #{editor,jdbcType=VARCHAR},
+        #{status,jdbcType=CHAR})
+    </insert>
+    <insert id="insertSelective" parameterType="me.mybatis.domain.VarBorrowRepay">
+        insert into tbVar_borrow_repay
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="customerid != null">
+                customerId,
+            </if>
+            <if test="loanTimes != null">
+                loan_times,
+            </if>
+            <if test="totalAmount != null">
+                total_amount,
+            </if>
+            <if test="fistLoanStrloandate != null">
+                fist_loan_strLoanDate,
+            </if>
+            <if test="firstLoanAmount != null">
+                first_loan_amount,
+            </if>
+            <if test="firstLoanIsOverdue != null">
+                first_loan_is_overdue,
+            </if>
+            <if test="firstLoanOverDueDays != null">
+                first_loan_over_due_days,
+            </if>
+            <if test="firstLoanOverDueAmount != null">
+                first_loan_over_due_amount,
+            </if>
+            <if test="firstLoanIsPrepay != null">
+                first_loan_is_prepay,
+            </if>
+            <if test="firstLoanPrepayDays != null">
+                first_loan_prepay_days,
+            </if>
+            <if test="firstLoanPrepayAmount != null">
+                first_loan_prepay_amount,
+            </if>
+            <if test="lastLoanStrloandate != null">
+                last_loan_strLoanDate,
+            </if>
+            <if test="lastLoanAmount != null">
+                last_loan_amount,
+            </if>
+            <if test="lastLoanIsOverdue != null">
+                last_loan_is_overdue,
+            </if>
+            <if test="lastLoanOverDueDays != null">
+                last_loan_over_due_days,
+            </if>
+            <if test="lastLoanOverDueAmount != null">
+                last_loan_over_due_amount,
+            </if>
+            <if test="lastLoanIsPrepay != null">
+                last_loan_is_prepay,
+            </if>
+            <if test="lastLoanPrepayDays != null">
+                last_loan_prepay_days,
+            </if>
+            <if test="lastLoanPrepayAmount != null">
+                last_loan_prepay_amount,
+            </if>
+            <if test="loanTimesInX != null">
+                loan_times_in_x,
+            </if>
+            <if test="totalAmountInX != null">
+                total_amount_in_x,
+            </if>
+            <if test="maxLoanamountInX != null">
+                max_loanamount_in_x,
+            </if>
+            <if test="xPrepay30Times != null">
+                x_prepay30_times,
+            </if>
+            <if test="xPrepay30Amount != null">
+                x_prepay30_amount,
+            </if>
+            <if test="maxXPrepay30Amount != null">
+                max_x_prepay30_amount,
+            </if>
+            <if test="xPrepay1Times != null">
+                x_prepay1_times,
+            </if>
+            <if test="xPrepay1Amount != null">
+                x_prepay1_amount,
+            </if>
+            <if test="maxXPrepay1Amount != null">
+                max_x_prepay1_amount,
+            </if>
+            <if test="xPrepay0Times != null">
+                x_prepay0_times,
+            </if>
+            <if test="xPrepay0Amount != null">
+                x_prepay0_amount,
+            </if>
+            <if test="maxXPrepay0Amount != null">
+                max_x_prepay0_amount,
+            </if>
+            <if test="xPrepaySumDays != null">
+                x_prepay_sum_days,
+            </if>
+            <if test="maxXPrepayDays != null">
+                max_x_prepay_days,
+            </if>
+            <if test="xOverdueSumDays != null">
+                x_overdue_sum_days,
+            </if>
+            <if test="maxXOverdueDays != null">
+                max_x_overdue_days,
+            </if>
+            <if test="xOverdueTimes != null">
+                x_overdue_times,
+            </if>
+            <if test="xOverdueTotalAmount != null">
+                x_overdue_total_amount,
+            </if>
+            <if test="maxXOverdueTotalAmount != null">
+                max_x_overdue_total_amount,
+            </if>
+            <if test="xOverdueAmount != null">
+                x_overdue_amount,
+            </if>
+            <if test="maxXOverdueAmount != null">
+                max_x_overdue_amount,
+            </if>
+            <if test="xObservation30Times != null">
+                x_observation30_times,
+            </if>
+            <if test="xOverdue30Times != null">
+                x_overdue30_times,
+            </if>
+            <if test="xOverdue30TotalAmount != null">
+                x_overdue30_total_amount,
+            </if>
+            <if test="maxXOverdue30TotalAmount != null">
+                max_x_overdue30_total_amount,
+            </if>
+            <if test="xOverdue30Amount != null">
+                x_overdue30_amount,
+            </if>
+            <if test="maxXOverdue30Amount != null">
+                max_x_overdue30_amount,
+            </if>
+            <if test="xObservation60Times != null">
+                x_observation60_times,
+            </if>
+            <if test="xOverdue60Times != null">
+                x_overdue60_times,
+            </if>
+            <if test="xOverdue60TotalAmount != null">
+                x_overdue60_total_amount,
+            </if>
+            <if test="maxXOverdue60TotalAmount != null">
+                max_x_overdue60_total_amount,
+            </if>
+            <if test="xOverdue60Amount != null">
+                x_overdue60_amount,
+            </if>
+            <if test="maxXOverdue60Amount != null">
+                max_x_overdue60_amount,
+            </if>
+            <if test="xObservation90Times != null">
+                x_observation90_times,
+            </if>
+            <if test="xOverdue90Times != null">
+                x_overdue90_times,
+            </if>
+            <if test="xOverdue90TotalAmount != null">
+                x_overdue90_total_amount,
+            </if>
+            <if test="maxXOverdue90TotalAmount != null">
+                max_x_overdue90_total_amount,
+            </if>
+            <if test="xOverdue90Amount != null">
+                x_overdue90_amount,
+            </if>
+            <if test="maxXOverdue90Amount != null">
+                max_x_overdue90_amount,
+            </if>
+            <if test="debtOverdueDaysMax != null">
+                debt_overdue_days_max,
+            </if>
+            <if test="xDebt != null">
+                x_debt,
+            </if>
+            <if test="xDebtOverdue != null">
+                x_debt_overdue,
+            </if>
+            <if test="cdate != null">
+                cdate,
+            </if>
+            <if test="edate != null">
+                edate,
+            </if>
+            <if test="creator != null">
+                creator,
+            </if>
+            <if test="editor != null">
+                editor,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="customerid != null">
+                #{customerid,jdbcType=BIGINT},
+            </if>
+            <if test="loanTimes != null">
+                #{loanTimes,jdbcType=INTEGER},
+            </if>
+            <if test="totalAmount != null">
+                #{totalAmount,jdbcType=BIGINT},
+            </if>
+            <if test="fistLoanStrloandate != null">
+                #{fistLoanStrloandate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="firstLoanAmount != null">
+                #{firstLoanAmount,jdbcType=BIGINT},
+            </if>
+            <if test="firstLoanIsOverdue != null">
+                #{firstLoanIsOverdue,jdbcType=TINYINT},
+            </if>
+            <if test="firstLoanOverDueDays != null">
+                #{firstLoanOverDueDays,jdbcType=INTEGER},
+            </if>
+            <if test="firstLoanOverDueAmount != null">
+                #{firstLoanOverDueAmount,jdbcType=BIGINT},
+            </if>
+            <if test="firstLoanIsPrepay != null">
+                #{firstLoanIsPrepay,jdbcType=TINYINT},
+            </if>
+            <if test="firstLoanPrepayDays != null">
+                #{firstLoanPrepayDays,jdbcType=INTEGER},
+            </if>
+            <if test="firstLoanPrepayAmount != null">
+                #{firstLoanPrepayAmount,jdbcType=BIGINT},
+            </if>
+            <if test="lastLoanStrloandate != null">
+                #{lastLoanStrloandate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="lastLoanAmount != null">
+                #{lastLoanAmount,jdbcType=BIGINT},
+            </if>
+            <if test="lastLoanIsOverdue != null">
+                #{lastLoanIsOverdue,jdbcType=TINYINT},
+            </if>
+            <if test="lastLoanOverDueDays != null">
+                #{lastLoanOverDueDays,jdbcType=TINYINT},
+            </if>
+            <if test="lastLoanOverDueAmount != null">
+                #{lastLoanOverDueAmount,jdbcType=BIGINT},
+            </if>
+            <if test="lastLoanIsPrepay != null">
+                #{lastLoanIsPrepay,jdbcType=TINYINT},
+            </if>
+            <if test="lastLoanPrepayDays != null">
+                #{lastLoanPrepayDays,jdbcType=INTEGER},
+            </if>
+            <if test="lastLoanPrepayAmount != null">
+                #{lastLoanPrepayAmount,jdbcType=BIGINT},
+            </if>
+            <if test="loanTimesInX != null">
+                #{loanTimesInX,jdbcType=INTEGER},
+            </if>
+            <if test="totalAmountInX != null">
+                #{totalAmountInX,jdbcType=BIGINT},
+            </if>
+            <if test="maxLoanamountInX != null">
+                #{maxLoanamountInX,jdbcType=BIGINT},
+            </if>
+            <if test="xPrepay30Times != null">
+                #{xPrepay30Times,jdbcType=INTEGER},
+            </if>
+            <if test="xPrepay30Amount != null">
+                #{xPrepay30Amount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXPrepay30Amount != null">
+                #{maxXPrepay30Amount,jdbcType=BIGINT},
+            </if>
+            <if test="xPrepay1Times != null">
+                #{xPrepay1Times,jdbcType=INTEGER},
+            </if>
+            <if test="xPrepay1Amount != null">
+                #{xPrepay1Amount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXPrepay1Amount != null">
+                #{maxXPrepay1Amount,jdbcType=BIGINT},
+            </if>
+            <if test="xPrepay0Times != null">
+                #{xPrepay0Times,jdbcType=INTEGER},
+            </if>
+            <if test="xPrepay0Amount != null">
+                #{xPrepay0Amount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXPrepay0Amount != null">
+                #{maxXPrepay0Amount,jdbcType=BIGINT},
+            </if>
+            <if test="xPrepaySumDays != null">
+                #{xPrepaySumDays,jdbcType=INTEGER},
+            </if>
+            <if test="maxXPrepayDays != null">
+                #{maxXPrepayDays,jdbcType=INTEGER},
+            </if>
+            <if test="xOverdueSumDays != null">
+                #{xOverdueSumDays,jdbcType=INTEGER},
+            </if>
+            <if test="maxXOverdueDays != null">
+                #{maxXOverdueDays,jdbcType=INTEGER},
+            </if>
+            <if test="xOverdueTimes != null">
+                #{xOverdueTimes,jdbcType=INTEGER},
+            </if>
+            <if test="xOverdueTotalAmount != null">
+                #{xOverdueTotalAmount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXOverdueTotalAmount != null">
+                #{maxXOverdueTotalAmount,jdbcType=BIGINT},
+            </if>
+            <if test="xOverdueAmount != null">
+                #{xOverdueAmount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXOverdueAmount != null">
+                #{maxXOverdueAmount,jdbcType=BIGINT},
+            </if>
+            <if test="xObservation30Times != null">
+                #{xObservation30Times,jdbcType=INTEGER},
+            </if>
+            <if test="xOverdue30Times != null">
+                #{xOverdue30Times,jdbcType=INTEGER},
+            </if>
+            <if test="xOverdue30TotalAmount != null">
+                #{xOverdue30TotalAmount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXOverdue30TotalAmount != null">
+                #{maxXOverdue30TotalAmount,jdbcType=BIGINT},
+            </if>
+            <if test="xOverdue30Amount != null">
+                #{xOverdue30Amount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXOverdue30Amount != null">
+                #{maxXOverdue30Amount,jdbcType=BIGINT},
+            </if>
+            <if test="xObservation60Times != null">
+                #{xObservation60Times,jdbcType=INTEGER},
+            </if>
+            <if test="xOverdue60Times != null">
+                #{xOverdue60Times,jdbcType=INTEGER},
+            </if>
+            <if test="xOverdue60TotalAmount != null">
+                #{xOverdue60TotalAmount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXOverdue60TotalAmount != null">
+                #{maxXOverdue60TotalAmount,jdbcType=BIGINT},
+            </if>
+            <if test="xOverdue60Amount != null">
+                #{xOverdue60Amount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXOverdue60Amount != null">
+                #{maxXOverdue60Amount,jdbcType=BIGINT},
+            </if>
+            <if test="xObservation90Times != null">
+                #{xObservation90Times,jdbcType=INTEGER},
+            </if>
+            <if test="xOverdue90Times != null">
+                #{xOverdue90Times,jdbcType=INTEGER},
+            </if>
+            <if test="xOverdue90TotalAmount != null">
+                #{xOverdue90TotalAmount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXOverdue90TotalAmount != null">
+                #{maxXOverdue90TotalAmount,jdbcType=BIGINT},
+            </if>
+            <if test="xOverdue90Amount != null">
+                #{xOverdue90Amount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXOverdue90Amount != null">
+                #{maxXOverdue90Amount,jdbcType=BIGINT},
+            </if>
+            <if test="debtOverdueDaysMax != null">
+                #{debtOverdueDaysMax,jdbcType=INTEGER},
+            </if>
+            <if test="xDebt != null">
+                #{xDebt,jdbcType=BIGINT},
+            </if>
+            <if test="xDebtOverdue != null">
+                #{xDebtOverdue,jdbcType=BIGINT},
+            </if>
+            <if test="cdate != null">
+                #{cdate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="edate != null">
+                #{edate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="creator != null">
+                #{creator,jdbcType=VARCHAR},
+            </if>
+            <if test="editor != null">
+                #{editor,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=CHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="me.mybatis.domain.VarBorrowRepay">
+        update tbVar_borrow_repay
+        <set>
+            <if test="customerid != null">
+                customerId = #{customerid,jdbcType=BIGINT},
+            </if>
+            <if test="loanTimes != null">
+                loan_times = #{loanTimes,jdbcType=INTEGER},
+            </if>
+            <if test="totalAmount != null">
+                total_amount = #{totalAmount,jdbcType=BIGINT},
+            </if>
+            <if test="fistLoanStrloandate != null">
+                fist_loan_strLoanDate = #{fistLoanStrloandate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="firstLoanAmount != null">
+                first_loan_amount = #{firstLoanAmount,jdbcType=BIGINT},
+            </if>
+            <if test="firstLoanIsOverdue != null">
+                first_loan_is_overdue = #{firstLoanIsOverdue,jdbcType=TINYINT},
+            </if>
+            <if test="firstLoanOverDueDays != null">
+                first_loan_over_due_days = #{firstLoanOverDueDays,jdbcType=INTEGER},
+            </if>
+            <if test="firstLoanOverDueAmount != null">
+                first_loan_over_due_amount = #{firstLoanOverDueAmount,jdbcType=BIGINT},
+            </if>
+            <if test="firstLoanIsPrepay != null">
+                first_loan_is_prepay = #{firstLoanIsPrepay,jdbcType=TINYINT},
+            </if>
+            <if test="firstLoanPrepayDays != null">
+                first_loan_prepay_days = #{firstLoanPrepayDays,jdbcType=INTEGER},
+            </if>
+            <if test="firstLoanPrepayAmount != null">
+                first_loan_prepay_amount = #{firstLoanPrepayAmount,jdbcType=BIGINT},
+            </if>
+            <if test="lastLoanStrloandate != null">
+                last_loan_strLoanDate = #{lastLoanStrloandate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="lastLoanAmount != null">
+                last_loan_amount = #{lastLoanAmount,jdbcType=BIGINT},
+            </if>
+            <if test="lastLoanIsOverdue != null">
+                last_loan_is_overdue = #{lastLoanIsOverdue,jdbcType=TINYINT},
+            </if>
+            <if test="lastLoanOverDueDays != null">
+                last_loan_over_due_days = #{lastLoanOverDueDays,jdbcType=TINYINT},
+            </if>
+            <if test="lastLoanOverDueAmount != null">
+                last_loan_over_due_amount = #{lastLoanOverDueAmount,jdbcType=BIGINT},
+            </if>
+            <if test="lastLoanIsPrepay != null">
+                last_loan_is_prepay = #{lastLoanIsPrepay,jdbcType=TINYINT},
+            </if>
+            <if test="lastLoanPrepayDays != null">
+                last_loan_prepay_days = #{lastLoanPrepayDays,jdbcType=INTEGER},
+            </if>
+            <if test="lastLoanPrepayAmount != null">
+                last_loan_prepay_amount = #{lastLoanPrepayAmount,jdbcType=BIGINT},
+            </if>
+            <if test="loanTimesInX != null">
+                loan_times_in_x = #{loanTimesInX,jdbcType=INTEGER},
+            </if>
+            <if test="totalAmountInX != null">
+                total_amount_in_x = #{totalAmountInX,jdbcType=BIGINT},
+            </if>
+            <if test="maxLoanamountInX != null">
+                max_loanamount_in_x = #{maxLoanamountInX,jdbcType=BIGINT},
+            </if>
+            <if test="xPrepay30Times != null">
+                x_prepay30_times = #{xPrepay30Times,jdbcType=INTEGER},
+            </if>
+            <if test="xPrepay30Amount != null">
+                x_prepay30_amount = #{xPrepay30Amount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXPrepay30Amount != null">
+                max_x_prepay30_amount = #{maxXPrepay30Amount,jdbcType=BIGINT},
+            </if>
+            <if test="xPrepay1Times != null">
+                x_prepay1_times = #{xPrepay1Times,jdbcType=INTEGER},
+            </if>
+            <if test="xPrepay1Amount != null">
+                x_prepay1_amount = #{xPrepay1Amount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXPrepay1Amount != null">
+                max_x_prepay1_amount = #{maxXPrepay1Amount,jdbcType=BIGINT},
+            </if>
+            <if test="xPrepay0Times != null">
+                x_prepay0_times = #{xPrepay0Times,jdbcType=INTEGER},
+            </if>
+            <if test="xPrepay0Amount != null">
+                x_prepay0_amount = #{xPrepay0Amount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXPrepay0Amount != null">
+                max_x_prepay0_amount = #{maxXPrepay0Amount,jdbcType=BIGINT},
+            </if>
+            <if test="xPrepaySumDays != null">
+                x_prepay_sum_days = #{xPrepaySumDays,jdbcType=INTEGER},
+            </if>
+            <if test="maxXPrepayDays != null">
+                max_x_prepay_days = #{maxXPrepayDays,jdbcType=INTEGER},
+            </if>
+            <if test="xOverdueSumDays != null">
+                x_overdue_sum_days = #{xOverdueSumDays,jdbcType=INTEGER},
+            </if>
+            <if test="maxXOverdueDays != null">
+                max_x_overdue_days = #{maxXOverdueDays,jdbcType=INTEGER},
+            </if>
+            <if test="xOverdueTimes != null">
+                x_overdue_times = #{xOverdueTimes,jdbcType=INTEGER},
+            </if>
+            <if test="xOverdueTotalAmount != null">
+                x_overdue_total_amount = #{xOverdueTotalAmount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXOverdueTotalAmount != null">
+                max_x_overdue_total_amount = #{maxXOverdueTotalAmount,jdbcType=BIGINT},
+            </if>
+            <if test="xOverdueAmount != null">
+                x_overdue_amount = #{xOverdueAmount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXOverdueAmount != null">
+                max_x_overdue_amount = #{maxXOverdueAmount,jdbcType=BIGINT},
+            </if>
+            <if test="xObservation30Times != null">
+                x_observation30_times = #{xObservation30Times,jdbcType=INTEGER},
+            </if>
+            <if test="xOverdue30Times != null">
+                x_overdue30_times = #{xOverdue30Times,jdbcType=INTEGER},
+            </if>
+            <if test="xOverdue30TotalAmount != null">
+                x_overdue30_total_amount = #{xOverdue30TotalAmount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXOverdue30TotalAmount != null">
+                max_x_overdue30_total_amount = #{maxXOverdue30TotalAmount,jdbcType=BIGINT},
+            </if>
+            <if test="xOverdue30Amount != null">
+                x_overdue30_amount = #{xOverdue30Amount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXOverdue30Amount != null">
+                max_x_overdue30_amount = #{maxXOverdue30Amount,jdbcType=BIGINT},
+            </if>
+            <if test="xObservation60Times != null">
+                x_observation60_times = #{xObservation60Times,jdbcType=INTEGER},
+            </if>
+            <if test="xOverdue60Times != null">
+                x_overdue60_times = #{xOverdue60Times,jdbcType=INTEGER},
+            </if>
+            <if test="xOverdue60TotalAmount != null">
+                x_overdue60_total_amount = #{xOverdue60TotalAmount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXOverdue60TotalAmount != null">
+                max_x_overdue60_total_amount = #{maxXOverdue60TotalAmount,jdbcType=BIGINT},
+            </if>
+            <if test="xOverdue60Amount != null">
+                x_overdue60_amount = #{xOverdue60Amount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXOverdue60Amount != null">
+                max_x_overdue60_amount = #{maxXOverdue60Amount,jdbcType=BIGINT},
+            </if>
+            <if test="xObservation90Times != null">
+                x_observation90_times = #{xObservation90Times,jdbcType=INTEGER},
+            </if>
+            <if test="xOverdue90Times != null">
+                x_overdue90_times = #{xOverdue90Times,jdbcType=INTEGER},
+            </if>
+            <if test="xOverdue90TotalAmount != null">
+                x_overdue90_total_amount = #{xOverdue90TotalAmount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXOverdue90TotalAmount != null">
+                max_x_overdue90_total_amount = #{maxXOverdue90TotalAmount,jdbcType=BIGINT},
+            </if>
+            <if test="xOverdue90Amount != null">
+                x_overdue90_amount = #{xOverdue90Amount,jdbcType=BIGINT},
+            </if>
+            <if test="maxXOverdue90Amount != null">
+                max_x_overdue90_amount = #{maxXOverdue90Amount,jdbcType=BIGINT},
+            </if>
+            <if test="debtOverdueDaysMax != null">
+                debt_overdue_days_max = #{debtOverdueDaysMax,jdbcType=INTEGER},
+            </if>
+            <if test="xDebt != null">
+                x_debt = #{xDebt,jdbcType=BIGINT},
+            </if>
+            <if test="xDebtOverdue != null">
+                x_debt_overdue = #{xDebtOverdue,jdbcType=BIGINT},
+            </if>
+            <if test="cdate != null">
+                cdate = #{cdate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="edate != null">
+                edate = #{edate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="creator != null">
+                creator = #{creator,jdbcType=VARCHAR},
+            </if>
+            <if test="editor != null">
+                editor = #{editor,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=CHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="me.mybatis.domain.VarBorrowRepay">
+        update tbVar_borrow_repay
+        set customerId = #{customerid,jdbcType=BIGINT},
+        loan_times = #{loanTimes,jdbcType=INTEGER},
+        total_amount = #{totalAmount,jdbcType=BIGINT},
+        fist_loan_strLoanDate = #{fistLoanStrloandate,jdbcType=TIMESTAMP},
+        first_loan_amount = #{firstLoanAmount,jdbcType=BIGINT},
+        first_loan_is_overdue = #{firstLoanIsOverdue,jdbcType=TINYINT},
+        first_loan_over_due_days = #{firstLoanOverDueDays,jdbcType=INTEGER},
+        first_loan_over_due_amount = #{firstLoanOverDueAmount,jdbcType=BIGINT},
+        first_loan_is_prepay = #{firstLoanIsPrepay,jdbcType=TINYINT},
+        first_loan_prepay_days = #{firstLoanPrepayDays,jdbcType=INTEGER},
+        first_loan_prepay_amount = #{firstLoanPrepayAmount,jdbcType=BIGINT},
+        last_loan_strLoanDate = #{lastLoanStrloandate,jdbcType=TIMESTAMP},
+        last_loan_amount = #{lastLoanAmount,jdbcType=BIGINT},
+        last_loan_is_overdue = #{lastLoanIsOverdue,jdbcType=TINYINT},
+        last_loan_over_due_days = #{lastLoanOverDueDays,jdbcType=TINYINT},
+        last_loan_over_due_amount = #{lastLoanOverDueAmount,jdbcType=BIGINT},
+        last_loan_is_prepay = #{lastLoanIsPrepay,jdbcType=TINYINT},
+        last_loan_prepay_days = #{lastLoanPrepayDays,jdbcType=INTEGER},
+        last_loan_prepay_amount = #{lastLoanPrepayAmount,jdbcType=BIGINT},
+        loan_times_in_x = #{loanTimesInX,jdbcType=INTEGER},
+        total_amount_in_x = #{totalAmountInX,jdbcType=BIGINT},
+        max_loanamount_in_x = #{maxLoanamountInX,jdbcType=BIGINT},
+        x_prepay30_times = #{xPrepay30Times,jdbcType=INTEGER},
+        x_prepay30_amount = #{xPrepay30Amount,jdbcType=BIGINT},
+        max_x_prepay30_amount = #{maxXPrepay30Amount,jdbcType=BIGINT},
+        x_prepay1_times = #{xPrepay1Times,jdbcType=INTEGER},
+        x_prepay1_amount = #{xPrepay1Amount,jdbcType=BIGINT},
+        max_x_prepay1_amount = #{maxXPrepay1Amount,jdbcType=BIGINT},
+        x_prepay0_times = #{xPrepay0Times,jdbcType=INTEGER},
+        x_prepay0_amount = #{xPrepay0Amount,jdbcType=BIGINT},
+        max_x_prepay0_amount = #{maxXPrepay0Amount,jdbcType=BIGINT},
+        x_prepay_sum_days = #{xPrepaySumDays,jdbcType=INTEGER},
+        max_x_prepay_days = #{maxXPrepayDays,jdbcType=INTEGER},
+        x_overdue_sum_days = #{xOverdueSumDays,jdbcType=INTEGER},
+        max_x_overdue_days = #{maxXOverdueDays,jdbcType=INTEGER},
+        x_overdue_times = #{xOverdueTimes,jdbcType=INTEGER},
+        x_overdue_total_amount = #{xOverdueTotalAmount,jdbcType=BIGINT},
+        max_x_overdue_total_amount = #{maxXOverdueTotalAmount,jdbcType=BIGINT},
+        x_overdue_amount = #{xOverdueAmount,jdbcType=BIGINT},
+        max_x_overdue_amount = #{maxXOverdueAmount,jdbcType=BIGINT},
+        x_observation30_times = #{xObservation30Times,jdbcType=INTEGER},
+        x_overdue30_times = #{xOverdue30Times,jdbcType=INTEGER},
+        x_overdue30_total_amount = #{xOverdue30TotalAmount,jdbcType=BIGINT},
+        max_x_overdue30_total_amount = #{maxXOverdue30TotalAmount,jdbcType=BIGINT},
+        x_overdue30_amount = #{xOverdue30Amount,jdbcType=BIGINT},
+        max_x_overdue30_amount = #{maxXOverdue30Amount,jdbcType=BIGINT},
+        x_observation60_times = #{xObservation60Times,jdbcType=INTEGER},
+        x_overdue60_times = #{xOverdue60Times,jdbcType=INTEGER},
+        x_overdue60_total_amount = #{xOverdue60TotalAmount,jdbcType=BIGINT},
+        max_x_overdue60_total_amount = #{maxXOverdue60TotalAmount,jdbcType=BIGINT},
+        x_overdue60_amount = #{xOverdue60Amount,jdbcType=BIGINT},
+        max_x_overdue60_amount = #{maxXOverdue60Amount,jdbcType=BIGINT},
+        x_observation90_times = #{xObservation90Times,jdbcType=INTEGER},
+        x_overdue90_times = #{xOverdue90Times,jdbcType=INTEGER},
+        x_overdue90_total_amount = #{xOverdue90TotalAmount,jdbcType=BIGINT},
+        max_x_overdue90_total_amount = #{maxXOverdue90TotalAmount,jdbcType=BIGINT},
+        x_overdue90_amount = #{xOverdue90Amount,jdbcType=BIGINT},
+        max_x_overdue90_amount = #{maxXOverdue90Amount,jdbcType=BIGINT},
+        debt_overdue_days_max = #{debtOverdueDaysMax,jdbcType=INTEGER},
+        x_debt = #{xDebt,jdbcType=BIGINT},
+        x_debt_overdue = #{xDebtOverdue,jdbcType=BIGINT},
+        cdate = #{cdate,jdbcType=TIMESTAMP},
+        edate = #{edate,jdbcType=TIMESTAMP},
+        creator = #{creator,jdbcType=VARCHAR},
+        editor = #{editor,jdbcType=VARCHAR},
+        status = #{status,jdbcType=CHAR}
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+</mapper>
